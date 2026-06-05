@@ -106,7 +106,7 @@
             this.cboRoomType.FormattingEnabled = true;
             this.cboRoomType.Items.AddRange(new object[] {
             "Phòng Tiêu Chuẩn (Standard)",
-            "Phòng Cao Cấp (Superior)",
+            "Phòng Cao Cấp (Superior)", 
             "Phòng Sang Trọng (Deluxe)",
             "Phòng Tổng Thống (VIP)"});
             this.cboRoomType.Location = new System.Drawing.Point(200, 193);

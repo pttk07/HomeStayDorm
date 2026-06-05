@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class UI_6b_TaoPhieuThongTinTraPhong
+    partial class UI_05a_TaoPhieuThongTinTraPhong
     {
         private System.ComponentModel.IContainer components = null;
 

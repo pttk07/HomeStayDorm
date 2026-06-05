@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class UI_7a_XuatYeuCauThanhToan
+    partial class UI_06b_XuatYeuCauThanhToan
     {
         private System.ComponentModel.IContainer components = null;
 

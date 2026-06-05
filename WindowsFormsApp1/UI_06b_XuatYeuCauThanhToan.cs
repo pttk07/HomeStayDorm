@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class UI_9_TraCuuHopDong : Form
+    public partial class UI_06b_XuatYeuCauThanhToan : Form
     {
-        public UI_9_TraCuuHopDong()
+        public UI_06b_XuatYeuCauThanhToan()
         {
             InitializeComponent();
+        }
+
+        private void lblGhiChuTien_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class UI_9_TraCuuHopDong
+    partial class UI_08_TraCuuHopDong
     {
         private System.ComponentModel.IContainer components = null;
 

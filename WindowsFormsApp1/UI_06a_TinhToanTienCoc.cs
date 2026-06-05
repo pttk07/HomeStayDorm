@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class UI_7a_XuatYeuCauThanhToan : Form
+    public partial class UI_06a_TinhToanTienCoc : Form
     {
-        public UI_7a_XuatYeuCauThanhToan()
+        public UI_06a_TinhToanTienCoc()
         {
             InitializeComponent();
         }
 
-        private void lblGhiChuTien_Click(object sender, EventArgs e)
+        private void btnChonPhieu_Click(object sender, EventArgs e)
         {
 
         }

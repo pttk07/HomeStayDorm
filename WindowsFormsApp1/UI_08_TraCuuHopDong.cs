@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class UI_7b_TinhToanTienCoc : Form
+    public partial class UI_08_TraCuuHopDong : Form
     {
-        public UI_7b_TinhToanTienCoc()
+        public UI_08_TraCuuHopDong()
         {
             InitializeComponent();
-        }
-
-        private void btnChonPhieu_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

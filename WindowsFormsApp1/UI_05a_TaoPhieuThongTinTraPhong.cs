@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class UI_6b_TaoPhieuThongTinTraPhong : Form
+    public partial class UI_05a_TaoPhieuThongTinTraPhong : Form
     {
-        public UI_6b_TaoPhieuThongTinTraPhong()
+        public UI_05a_TaoPhieuThongTinTraPhong()
         {
             InitializeComponent();
         }

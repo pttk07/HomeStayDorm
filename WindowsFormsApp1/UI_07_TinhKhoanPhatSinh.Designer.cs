@@ -362,9 +362,9 @@
             this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXacNhan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacNhan.Location = new System.Drawing.Point(490, 520);
+            this.btnXacNhan.Location = new System.Drawing.Point(454, 520);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(280, 40);
+            this.btnXacNhan.Size = new System.Drawing.Size(316, 40);
             this.btnXacNhan.TabIndex = 5;
             this.btnXacNhan.Text = "Xác nhận && Chuyển sang Khấu trừ ➔";
             this.btnXacNhan.UseVisualStyleBackColor = false;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class UI_10_LapBangDoiSoat : Form
+    public partial class UI_09_LapBangDoiSoat : Form
     {
-        public UI_10_LapBangDoiSoat()
+        public UI_09_LapBangDoiSoat()
         {
             InitializeComponent();
         }

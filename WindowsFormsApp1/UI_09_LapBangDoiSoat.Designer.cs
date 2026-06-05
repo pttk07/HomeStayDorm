@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class UI_10_LapBangDoiSoat
+    partial class UI_09_LapBangDoiSoat
     {
         private System.ComponentModel.IContainer components = null;
 

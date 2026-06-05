@@ -52,11 +52,41 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="UI_14_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="UI_14_DangNhap.Designer.cs">
+      <DependentUpon>UI_14_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_10_DoiChieuThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_10_DoiChieuThanhToan.Designer.cs">
+      <DependentUpon>UI_10_DoiChieuThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_11_TinhKhoanCanThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_11_TinhKhoanCanThanhToan.Designer.cs">
+      <DependentUpon>UI_11_TinhKhoanCanThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_12_HoanTienChoKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_12_HoanTienChoKhach.Designer.cs">
+      <DependentUpon>UI_12_HoanTienChoKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_13_CapNhatKetQuaThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_13_CapNhatKetQuaThanhToan.Designer.cs">
+      <DependentUpon>UI_13_CapNhatKetQuaThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_28_DashboardKeToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_28_DashboardKeToan.Designer.cs">
+      <DependentUpon>UI_28_DashboardKeToan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +102,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI_28_DashboardKeToan.resx">
+      <DependentUpon>UI_28_DashboardKeToan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

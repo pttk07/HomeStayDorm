@@ -39,6 +39,9 @@ namespace WindowsFormsApp1
 
             MessageBox.Show(depositInfo, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
+            // Hậu điều kiện: Chuyển yêu cầu sang Kế toán
+            MessageBox.Show("Đã gửi yêu cầu thanh toán sang bộ phận Kế toán (UI_KeToan).", "Chuyển bước", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
             this.Close();
         }
     }

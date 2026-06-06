@@ -53,15 +53,14 @@ namespace WindowsFormsApp1
 
             MessageBox.Show(successMsg, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Hậu điều kiện: Chuyển sang bước lập phiếu đặt cọc
-            DialogResult result = MessageBox.Show("Ghi nhận thành công! Bạn có muốn chuyển sang bước Lập phiếu đặt cọc ngay bây giờ không?", 
+            // Hậu điều kiện: Chuyển sang bước lập hợp đồng
+            DialogResult result = MessageBox.Show("Ghi nhận thành công! Bạn có muốn chuyển sang bước Lập hợp đồng ngay bây giờ không?", 
                 "Chuyển bước", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                UI_03_LapPhieuCoc depositForm = new UI_03_LapPhieuCoc();
-                // Optionally can pass parameters or data to this form if needed
-                depositForm.Show();
+                UI_02_LapHopDong contractForm = new UI_02_LapHopDong();
+                contractForm.Show();
             }
 
             this.Close();

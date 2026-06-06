@@ -275,11 +275,29 @@ namespace WindowsFormsApp1
             this.dgvResults.TabIndex = 0;
             
             // 
+            // 
+            // btnSelectRoom
+            // 
+            this.btnSelectRoom = new System.Windows.Forms.Button();
+            this.btnSelectRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelectRoom.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSelectRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectRoom.ForeColor = System.Drawing.Color.White;
+            this.btnSelectRoom.Location = new System.Drawing.Point(690, 550);
+            this.btnSelectRoom.Name = "btnSelectRoom";
+            this.btnSelectRoom.Size = new System.Drawing.Size(160, 40);
+            this.btnSelectRoom.TabIndex = 3;
+            this.btnSelectRoom.Text = "CHỌN PHÒNG";
+            this.btnSelectRoom.UseVisualStyleBackColor = false;
+            this.btnSelectRoom.Click += new System.EventHandler(this.btnSelectRoom_Click);
+            
+            // 
             // UI_01_TimKiemPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 560);
+            this.ClientSize = new System.Drawing.Size(880, 610);
+            this.Controls.Add(this.btnSelectRoom);
             this.Controls.Add(this.gbResults);
             this.Controls.Add(this.gbFilters);
             this.Controls.Add(this.lblTitle);
@@ -297,6 +315,21 @@ namespace WindowsFormsApp1
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private System.Windows.Forms.Button btnSelectRoom;
+
+        private void btnSelectRoom_Click(object sender, EventArgs e)
+        {
+            if (dgvResults.SelectedRows.Count > 0)
+            {
+                MessageBox.Show("Đã chọn phòng: " + dgvResults.SelectedRows[0].Cells[0].Value.ToString() + "\nChuyển sang trang Đăng ký khách hàng.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Here we would transition to UI_DangKyKhach
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một phòng từ danh sách.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void UI_01_TimKiemPhong_Load(object sender, EventArgs e)

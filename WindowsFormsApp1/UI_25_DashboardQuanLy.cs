@@ -51,18 +51,19 @@ namespace WindowsFormsApp1
 
         // ─── Button handlers ──────────────────────────────────────────────────
 
-        private void MoFormGia(string ten)
+        private void ShowForm(Form form)
         {
-            new UI_00_FormGia(ten).ShowDialog();
+            using (form)
+                form.ShowDialog(this);
         }
 
-        private void btnDoiChieuChungTu_Click(object s, EventArgs e) => MoFormGia("Đối chiếu chứng từ");
-        private void btnKiemTraDieuKien_Click(object s, EventArgs e) => MoFormGia("Kiểm tra điều kiện khách thuê");
-        private void btnGhiNhanTinhTrang_Click(object s, EventArgs e) => MoFormGia("Ghi nhận tình trạng phòng/giường");
-        private void btnCapNhatTrangThai_Click(object s, EventArgs e) => MoFormGia("Cập nhật trạng thái phòng trống");
-        private void btnKiemTraPhongTrong_Click(object s, EventArgs e) => MoFormGia("Kiểm tra phòng/giường còn trống");
-        private void btnLapBienBanBanGiao_Click(object s, EventArgs e) => MoFormGia("Lập biên bản bàn giao phòng");
-        private void btnTaoBienBanThanhLy_Click(object s, EventArgs e) => MoFormGia("Tạo biên bản thanh lý hợp đồng");
+        private void btnDoiChieuChungTu_Click(object s, EventArgs e) => ShowForm(new UI_15_DoiChieuChungTu());
+        private void btnKiemTraDieuKien_Click(object s, EventArgs e) => ShowForm(new UI_16_KiemTraDieuKienKhachThue());
+        private void btnGhiNhanTinhTrang_Click(object s, EventArgs e) => ShowForm(new UI_17_GhiNhanTinhTrangPhongGiuong());
+        private void btnCapNhatTrangThai_Click(object s, EventArgs e) => ShowForm(new UI_18_CapNhatTrangThaiPhongTrong());
+        private void btnKiemTraPhongTrong_Click(object s, EventArgs e) => ShowForm(new UI_19_KiemTraPhongGiuongConTrong());
+        private void btnLapBienBanBanGiao_Click(object s, EventArgs e) => ShowForm(new UI_20_LapBienBanGiaoPhong());
+        private void btnTaoBienBanThanhLy_Click(object s, EventArgs e) => ShowForm(new UI_21_TaoBienBanThanhLyHopDong());
 
         private void btnLogout_Click(object s, EventArgs e)
         {

@@ -54,26 +54,25 @@ namespace WindowsFormsApp1
 
         // ─── Button handlers ──────────────────────────────────────────────────
 
-        private void MoFormGia(string ten)
+        private void ShowForm(Form form)
         {
-            new UI_00_FormGia(ten).ShowDialog();
+            using (form)
+                form.ShowDialog(this);
         }
 
-        private void btnTraCuuPhongTrong_Click(object s, EventArgs e) => MoFormGia("Tra cứu phòng trống theo điều kiện");
-        private void btnLapHopDong_Click(object s, EventArgs e) => MoFormGia("Lập hợp đồng");
-        private void btnLapPhieuDatCoc_Click(object s, EventArgs e) => MoFormGia("Lập phiếu đặt cọc");
-        private void btnTiepNhanThanhToan_Click(object s, EventArgs e) => MoFormGia("Tiếp nhận thanh toán cọc");
-        private void btnTaoPhieuTraPhong_Click(object s, EventArgs e) => MoFormGia("Tạo phiếu thông tin trả phòng");
+        private void btnTraCuuPhongTrong_Click(object s, EventArgs e) => ShowForm(new UI_01_TimKiemPhong());
+        private void btnLapHopDong_Click(object s, EventArgs e) => ShowForm(new UI_02_LapHopDong());
+        private void btnLapPhieuDatCoc_Click(object s, EventArgs e) => ShowForm(new UI_03_LapPhieuCoc());
+        private void btnTiepNhanThanhToan_Click(object s, EventArgs e) => ShowForm(new UI_04_TiepNhanThanhToan());
+        private void btnTaoPhieuTraPhong_Click(object s, EventArgs e) => ShowForm(new UI_05a_TaoPhieuThongTinTraPhong());
         private void btnDangKyThongTinKhach_Click(object s, EventArgs e)
         {
-            var form = new UI_24a_DangKyThongTinKhach();
-            form.ShowDialog();
+            ShowForm(new UI_24a_DangKyThongTinKhach());
         }
 
         private void btnCapNhatThongTinKhach_Click(object s, EventArgs e)
         {
-            var form = new UI_24b_CapNhatThongTinKhach();
-            form.ShowDialog();
+            ShowForm(new UI_24b_CapNhatThongTinKhach());
         }
 
         private void btnLogout_Click(object s, EventArgs e)

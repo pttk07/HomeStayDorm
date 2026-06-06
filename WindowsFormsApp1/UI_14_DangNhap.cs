@@ -12,32 +12,43 @@ namespace WindowsFormsApp1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "admin" && txtPassword.Text == "123456")
+            string username = txtUsername.Text.Trim().ToLowerInvariant();
+            string password = txtPassword.Text;
+
+            if (password != "123456")
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                UI_26_DashboardQTHethong mainForm = new UI_26_DashboardQTHethong();
-                mainForm.Closed += (s, args) => this.Close();
-                mainForm.Show();
-            } else if (txtUsername.Text == "sale" && txtPassword.Text == "123456")
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Form dashboard = null;
+
+            if (username == "admin")
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                UI_27_DashboardSale mainForm = new UI_27_DashboardSale();
-                mainForm.Closed += (s, args) => this.Close();
-                mainForm.Show();
-            } else if (txtUsername.Text == "manager" && txtPassword.Text == "123456")
+                dashboard = new UI_26_DashboardQTHethong();
+            }
+            else if (username == "sale")
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                UI_25_DashboardQuanLy mainForm = new UI_25_DashboardQuanLy();
-                mainForm.Closed += (s, args) => this.Close();
-                mainForm.Show();
+                dashboard = new UI_27_DashboardSale();
+            }
+            else if (username == "accountant" || username == "ketoan")
+            {
+                dashboard = new UI_28_DashboardKeToan();
+            }
+            else if (username == "manager" || username == "quanly")
+            {
+                dashboard = new UI_25_DashboardQuanLy();
             }
             else
             {
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+            dashboard.Closed += (s, args) => this.Close();
+            dashboard.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -36,27 +36,31 @@ namespace WindowsFormsApp1
 
         private void btnXuatYeuCauThanhToan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng 'Xuất yêu cầu thanh toán' đang là mô phỏng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (var f = new UI_06b_XuatYeuCauThanhToan())
+                f.ShowDialog(this);
         }
 
         private void btnTinhKhoanPhatSinh_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng 'Tính khoản phát sinh' đang là mô phỏng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (var f = new UI_8_Tính_khoản_phát_sinh())
+                f.ShowDialog(this);
         }
 
         private void btnTraCuuHopDong_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng 'Tra cứu hợp đồng' đang là mô phỏng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (var f = new UI_08_TraCuuHopDong())
+                f.ShowDialog(this);
         }
 
         private void btnLapBangDoiSoat_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng 'Lập bảng đối soát' đang là mô phỏng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (var f = new UI_09_LapBangDoiSoat())
+                f.ShowDialog(this);
         }
 
         private void btnDoiChieuKhoanThanhToan_Click(object sender, EventArgs e)
         {
-            using (var f = new UI_11_TinhKhoanCanThanhToan())
+            using (var f = new UI_10_DoiChieuThanhToan())
                 f.ShowDialog(this);
         }
 

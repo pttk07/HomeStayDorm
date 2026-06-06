@@ -274,30 +274,29 @@ namespace WindowsFormsApp1
 
         private void btnSearchDeposit_Click(object sender, EventArgs e)
         {
-            string depositCode = txtDepositCode.Text.Trim();
-            if (string.IsNullOrEmpty(depositCode))
+            UI_02a_TraCuuPhieuDatCoc searchForm = new UI_02a_TraCuuPhieuDatCoc();
+            if (searchForm.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Vui lòng nhập mã phiếu đặt cọc để tra cứu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (depositCode == "DC001")
-            {
-                txtCustomerInfo.Text = "Nguyễn Văn A - 0123456789 - CMND: 079123456789";
+                // Nhận dữ liệu từ form tra cứu
+                txtDepositCode.Text = searchForm.SelectedDepositCode;
+                txtCustomerInfo.Text = searchForm.SelectedCustomerName;
                 
-                // Clear existing and add mock room
+                // Clear existing and add selected room
                 dgvRooms.Rows.Clear();
-                dgvRooms.Rows.Add("101", "5,000,000", "Đang trống", "Giường Master");
+                // Giả lập lấy chi tiết phòng dựa theo mã phòng trả về
+                string roomNum = searchForm.SelectedRoom;
+                if (roomNum == "101")
+                    dgvRooms.Rows.Add("101", "5,000,000", "Đang trống", "Giường Master");
+                else if (roomNum == "102")
+                    dgvRooms.Rows.Add("102", "1,500,000", "Đang trống", "Giường tầng 1");
+                else
+                    dgvRooms.Rows.Add(roomNum, "2,000,000", "Đang trống", "N/A");
                 
                 txtDuration.Text = "01/10/2023 - 01/10/2024 (12 tháng)";
                 txtTotalCost.Text = "5,000,000 VNĐ/tháng";
                 txtTerms.Text = "- Cọc 1 tháng tiền nhà.\r\n- Thanh toán vào ngày 1-5 hàng tháng.\r\n- Không được nuôi thú cưng.";
                 
                 btnCreateContract.Enabled = true; 
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy thông tin phiếu đặt cọc.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

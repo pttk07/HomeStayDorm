@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
         
         private GroupBox gbResults;
         private DataGridView dgvResults;
+        private Button btnSelectRoom;
 
         public UI_01_TimKiemPhong()
         {
@@ -46,6 +47,7 @@ namespace WindowsFormsApp1
             this.btnSearch = new System.Windows.Forms.Button();
             this.gbResults = new System.Windows.Forms.GroupBox();
             this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.btnSelectRoom = new System.Windows.Forms.Button();
             
             this.gbFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMinPrice)).BeginInit();
@@ -275,11 +277,28 @@ namespace WindowsFormsApp1
             this.dgvResults.TabIndex = 0;
             
             // 
+            // btnSelectRoom
+            // 
+            this.btnSelectRoom.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSelectRoom.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSelectRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectRoom.ForeColor = System.Drawing.Color.White;
+            this.btnSelectRoom.Location = new System.Drawing.Point(360, 550);
+            this.btnSelectRoom.Name = "btnSelectRoom";
+            this.btnSelectRoom.Size = new System.Drawing.Size(160, 40);
+            this.btnSelectRoom.TabIndex = 3;
+            this.btnSelectRoom.Text = "Chọn phòng";
+            this.btnSelectRoom.UseVisualStyleBackColor = false;
+            this.btnSelectRoom.Click += new System.EventHandler(this.btnSelectRoom_Click);
+            
+            // 
             // UI_01_TimKiemPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 560);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(880, 600);
+            this.Controls.Add(this.btnSelectRoom);
             this.Controls.Add(this.gbResults);
             this.Controls.Add(this.gbFilters);
             this.Controls.Add(this.lblTitle);
@@ -332,6 +351,33 @@ namespace WindowsFormsApp1
             {
                 // Dòng sự kiện phụ: Không tìm thấy kết quả
                 MessageBox.Show("Không tìm thấy kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnSelectRoom_Click(object sender, EventArgs e)
+        {
+            if (dgvResults.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dgvResults.SelectedRows[0];
+                string status = row.Cells[3].Value?.ToString();
+
+                if (status != "Trống" && status != "Đang trống")
+                {
+                    MessageBox.Show("Vui lòng chọn phòng có trạng thái 'Trống' để tiếp tục.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Lấy thông tin phòng đã chọn và mở UI_01a
+                UI_01a_GhiNhanKetQuaChonPhong confirmForm = new UI_01a_GhiNhanKetQuaChonPhong();
+                confirmForm.RoomNumber = row.Cells[0].Value?.ToString();
+                confirmForm.BedPosition = row.Cells[1].Value?.ToString();
+                confirmForm.Price = row.Cells[2].Value?.ToString();
+                
+                confirmForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một phòng từ danh sách.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

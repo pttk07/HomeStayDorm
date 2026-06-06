@@ -142,6 +142,18 @@
     <Compile Include="UI_01_TimKiemPhong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI_01a_GhiNhanKetQuaChonPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_01a_GhiNhanKetQuaChonPhong.Designer.cs">
+      <DependentUpon>UI_01a_GhiNhanKetQuaChonPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_02a_TraCuuPhieuDatCoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_02a_TraCuuPhieuDatCoc.Designer.cs">
+      <DependentUpon>UI_02a_TraCuuPhieuDatCoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_03_LapPhieuCoc.cs">
       <SubType>Form</SubType>
     </Compile>

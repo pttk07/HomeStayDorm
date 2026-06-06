@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_05a_TaoPhieuThongTinTraPhong()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void btnMoTraCuu_Click(object sender, EventArgs e)

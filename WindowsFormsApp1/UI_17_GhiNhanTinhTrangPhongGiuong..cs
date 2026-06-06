@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_17_GhiNhanTinhTrangPhongGiuong()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void Form1_Load(object sender, EventArgs e)

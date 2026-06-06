@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_15_DoiChieuChungTu()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void UI_15_DoiChieuChungTu_Load(object sender, EventArgs e)

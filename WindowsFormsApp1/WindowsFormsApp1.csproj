@@ -139,6 +139,7 @@
     <Compile Include="UI_28_DashboardKeToan.Designer.cs">
       <DependentUpon>UI_28_DashboardKeToan.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppUiStyle.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

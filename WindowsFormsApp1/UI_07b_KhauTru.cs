@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_07b_KhauTru()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
     }
 }

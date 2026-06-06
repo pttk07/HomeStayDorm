@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_19_KiemTraPhongGiuongConTrong()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

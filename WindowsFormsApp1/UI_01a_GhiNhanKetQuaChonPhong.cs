@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
         public UI_01a_GhiNhanKetQuaChonPhong()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void UI_01a_GhiNhanKetQuaChonPhong_Load(object sender, EventArgs e)

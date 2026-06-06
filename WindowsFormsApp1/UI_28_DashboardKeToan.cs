@@ -9,18 +9,31 @@ namespace WindowsFormsApp1
         public UI_28_DashboardKeToan()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void formLoad(object sender, EventArgs e)
         {
             UpdateSummary();
+            LoadStatCards();
         }
 
         private void UpdateSummary()
         {
-            // Count only buttons in navPanel (functions)
             int total = navPanel.Controls.OfType<Button>().Count(b => b.Visible);
             lblTotalTasks.Text = $"Tổng chức năng: {total}";
+        }
+
+        private void LoadStatCards()
+        {
+            lblYeuCauV.Text = "12";
+            lblYeuCauS.Text = "↑ 3 hôm nay";
+            lblDoiSoatV.Text = "5";
+            lblDoiSoatS.Text = "Chờ đối chiếu";
+            lblHoanTienV.Text = "2";
+            lblHoanTienS.Text = "Cần xử lý";
+            lblChoXuLyV.Text = "7";
+            lblChoXuLyS.Text = "Tổng hồ sơ";
         }
 
         private void btnTaiLai_Click(object sender, EventArgs e)

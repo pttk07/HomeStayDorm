@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_8_Tính_khoản_phát_sinh()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void txtMaHD_TextChanged(object sender, EventArgs e)

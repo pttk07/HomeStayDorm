@@ -58,6 +58,7 @@ namespace WindowsFormsApp1
             btnHuy.Click += (s, e) => { DialogResult = DialogResult.Cancel; Close(); };
             this.Controls.Add(btnLuu);
             this.Controls.Add(btnHuy);
+            AppUiStyle.Apply(this);
         }
 
         private void Luu()
@@ -215,6 +216,7 @@ namespace WindowsFormsApp1
             btnHuy = Btn("Hủy", 358, 332, 80, Color.FromArgb(120, 120, 130));
             btnHuy.Click += (s, e) => { DialogResult = DialogResult.Cancel; Close(); };
             Add(btnLuu); Add(btnHuy);
+            AppUiStyle.Apply(this);
         }
 
         private void Luu()
@@ -366,6 +368,7 @@ namespace WindowsFormsApp1
             btnHuy.Click += (s, e) => { DialogResult = DialogResult.Cancel; Close(); };
             this.Controls.Add(btnLuu);
             this.Controls.Add(btnHuy);
+            AppUiStyle.Apply(this);
         }
     }
 
@@ -457,6 +460,7 @@ namespace WindowsFormsApp1
             btnHuy.Click += (s, e) => { DialogResult = DialogResult.Cancel; Close(); };
             this.Controls.Add(btnLuu);
             this.Controls.Add(btnHuy);
+            AppUiStyle.Apply(this);
         }
     }
 }

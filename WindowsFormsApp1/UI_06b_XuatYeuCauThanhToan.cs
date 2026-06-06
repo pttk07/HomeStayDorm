@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_06b_XuatYeuCauThanhToan()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void lblGhiChuTien_Click(object sender, EventArgs e)

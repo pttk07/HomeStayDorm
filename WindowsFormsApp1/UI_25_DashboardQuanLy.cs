@@ -9,6 +9,7 @@ namespace WindowsFormsApp1
         public UI_25_DashboardQuanLy()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             this.Load += UI_25_DashboardQuanLy_Load;
         }
 
@@ -38,11 +39,11 @@ namespace WindowsFormsApp1
             dgvCongViec.Columns["LoaiViec"].FillWeight = 110;
             dgvCongViec.Columns["UuTien"].FillWeight = 60;
 
-            dgvCongViec.Rows.Add("1", "Đối chiếu chứng từ", "Phiếu cọc #PC2506-08", "Xác nhận thanh toán cọc từ sale Văn An", "🔴 Cao");
-            dgvCongViec.Rows.Add("2", "Kiểm tra điều kiện thuê", "Khách: Trần Minh Quân", "Kiểm tra giấy tờ, điều kiện trước ký HĐ", "🔴 Cao");
-            dgvCongViec.Rows.Add("3", "Lập biên bản bàn giao", "P102 - Giường B", "Khách nhận phòng lúc 14:00 hôm nay", "🟡 Vừa");
-            dgvCongViec.Rows.Add("4", "Cập nhật trạng thái phòng", "P301 - Chi nhánh Q7", "Phòng bảo trì hoàn tất, chuyển về Trống", "🟡 Vừa");
-            dgvCongViec.Rows.Add("5", "Tạo biên bản thanh lý", "HĐ #HD2503-15", "Khách trả phòng, thanh lý hợp đồng", "🟢 Thấp");
+            dgvCongViec.Rows.Add("1", "Đối chiếu chứng từ",    "Phiếu cọc PC-2506-002",   "Xác nhận thanh toán cọc của Phạm Thị Dung (P103)",      "🔴 Cao");
+            dgvCongViec.Rows.Add("2", "Kiểm tra điều kiện thuê", "PC-2506-001 – Trần Thị Bình", "Kiểm tra giấy tờ, điều kiện trước ký HĐ (P202-G202A)", "🔴 Cao");
+            dgvCongViec.Rows.Add("3", "Lập biên bản bàn giao",  "P202 - G202A",            "Khách nhận phòng lúc 14:00 hôm nay",                     "🟡 Vừa");
+            dgvCongViec.Rows.Add("4", "Cập nhật trạng thái phòng", "P301 - Chi nhánh Q7",  "Phòng bảo trì hoàn tất, chuyển về Trống",                "🟡 Vừa");
+            dgvCongViec.Rows.Add("5", "Tạo biên bản thanh lý",  "HD-2503-007 – Bùi Thị Ngọc", "Khách trả phòng sớm, lập biên bản thanh lý HĐ",       "🟢 Thấp");
 
             for (int i = 0; i < dgvCongViec.Rows.Count; i++)
                 dgvCongViec.Rows[i].DefaultCellStyle.BackColor =

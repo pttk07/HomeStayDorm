@@ -16,22 +16,30 @@ namespace WindowsFormsApp1
         public UI_21_TaoBienBanThanhLyHopDong()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
-        // Khi form load, khởi tạo bảng khoản phát sinh
         private void FormThanhLyHopDong_Load(object sender, EventArgs e)
         {
-            // Thêm cột cho DataGridView
-            phatSinhGrid.Columns.Add("LoaiKhoan", "Loại khoản");
-            phatSinhGrid.Columns.Add("SoTien", "Số tiền");
-            phatSinhGrid.Columns.Add("GhiChu", "Ghi chú");
+            hopDongComboBox.Items.AddRange(new object[] {
+                "HD-2503-007 – Bùi Thị Ngọc (P102-G102C)",
+                "HD-2502-008 – Ngô Quốc Phong (P201-G201B)",
+                "HD-2411-009 – Phan Thị Xuân",
+                "HD-2504-001 – Nguyễn Văn An (P101-G101A)",
+                "HD-2504-002 – Lê Hoàng Cường (P201-G201A)",
+                "HD-2504-003 – Võ Minh Đức (P101-G101B)",
+            });
+            hopDongComboBox.SelectedIndex = 0;
 
-            // Dữ liệu mẫu
-            phatSinhGrid.Rows.Add("Phí hư hỏng", 500000, "Hư hỏng TV");
-            phatSinhGrid.Rows.Add("Phí vệ sinh", 150000, "Vệ sinh phòng");
+            phatSinhGrid.Columns.Add("LoaiKhoan", "Loại khoản");
+            phatSinhGrid.Columns.Add("SoTien",    "Số tiền (VNĐ)");
+            phatSinhGrid.Columns.Add("GhiChu",    "Ghi chú");
+
+            phatSinhGrid.Rows.Add("Phí hư hỏng tài sản", 500000, "Hư hỏng TV, trầy xước bàn");
+            phatSinhGrid.Rows.Add("Phí vệ sinh phòng",   150000, "Vệ sinh sau khi trả phòng");
+            phatSinhGrid.Rows.Add("Tiền thuê còn nợ",    0,      "Đã thanh toán đủ");
         }
 
-        // Nút tải dữ liệu hợp đồng
         private void taiDuLieuButton_Click(object sender, EventArgs e)
         {
             if (hopDongComboBox.SelectedItem == null)
@@ -39,9 +47,9 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Vui lòng chọn hợp đồng cần thanh lý!", "Thông báo");
                 return;
             }
-
             string hopDong = hopDongComboBox.SelectedItem.ToString();
-            MessageBox.Show($"Đã tải dữ liệu cho hợp đồng: {hopDong}", "Thông báo");
+            MessageBox.Show($"Đã tải dữ liệu cho hợp đồng: {hopDong}", "Thông báo",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // Nút thêm khoản phát sinh
@@ -66,10 +74,11 @@ namespace WindowsFormsApp1
                 }
             }
 
-            tongTienLabel.Text = $"Tổng số tiền cần thanh toán/hoàn trả: {tongTien:N0} VND";
+            tongTienLabel.Text = $"Tổng khấu trừ: {AppUiStyle.Money(tongTien)}";
             trangThaiLabel.Text = "Trạng thái hợp đồng: Chờ thanh toán";
 
-            MessageBox.Show("Biên bản thanh lý hợp đồng đã được tạo thành công!", "Thông báo");
+            MessageBox.Show("Biên bản thanh lý hợp đồng đã được tạo thành công!", "Thông báo",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_18_CapNhatTrangThaiPhongTrong()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void label2_Click(object sender, EventArgs e)

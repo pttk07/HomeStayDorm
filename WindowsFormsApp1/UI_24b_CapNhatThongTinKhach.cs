@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_24b_CapNhatThongTinKhach()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             LoadSampleData();
         }
 

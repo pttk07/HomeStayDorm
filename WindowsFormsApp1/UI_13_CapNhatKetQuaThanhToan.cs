@@ -15,18 +15,22 @@ namespace WindowsFormsApp1
         public UI_13_CapNhatKetQuaThanhToan()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             ketQuaFilePath = Path.Combine(Application.StartupPath, "cap_nhat_ketqua_thanh_toan.xml");
         }
 
         private void formLoad(object sender, EventArgs e)
         {
             txtTimKiem.Text = string.Empty;
-            dateTimePickerNgayThanhToan.Value = DateTime.Today;
+            dateTimePickerNgayThanhToan.Value = new DateTime(2026, 6, 6);
             dataGridViewChoXuLy.Rows.Clear();
 
-            // Dữ liệu mẫu: (Mã hồ sơ, Khách hàng, Loại, Số tiền yêu cầu, Trạng thái)
-            dataGridViewChoXuLy.Rows.Add("HS001", "Nguyễn Văn A", "Thanh toán", "1.500.000", "Chờ xử lý");
-            dataGridViewChoXuLy.Rows.Add("HS002", "Trần Thị B", "Hoàn trả", "800.000", "Chờ xử lý");
+            dataGridViewChoXuLy.Rows.Add("HS-2506-001", "Nguyễn Văn An",  "Thanh toán tháng 6", "2.000.000", "Chờ xử lý");
+            dataGridViewChoXuLy.Rows.Add("HS-2506-002", "Lê Hoàng Cường", "Thanh toán tháng 6", "1.800.000", "Chờ xử lý");
+            dataGridViewChoXuLy.Rows.Add("HS-2506-003", "Võ Minh Đức",    "Thanh toán tháng 6", "2.000.000", "Chờ xử lý");
+            dataGridViewChoXuLy.Rows.Add("HS-2506-004", "Hoàng Thị Lan",  "Thanh toán tháng 6", "2.100.000", "Chờ xử lý");
+            dataGridViewChoXuLy.Rows.Add("HS-2506-005", "Phạm Văn Toàn",  "Thanh toán tháng 6", "2.000.000", "Chờ xử lý");
+            dataGridViewChoXuLy.Rows.Add("HS-2506-006", "Bùi Thị Ngọc",   "Hoàn tiền cọc",      "1.450.000", "Chờ xử lý");
 
             ClearDetailArea();
         }

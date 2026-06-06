@@ -92,7 +92,7 @@
             this.cboNhomQuyen.Location = new System.Drawing.Point(314, 13);
             this.cboNhomQuyen.Size = new System.Drawing.Size(130, 23);
             this.cboNhomQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboNhomQuyen.Items.AddRange(new object[] { "Tất cả nhóm", "Sale", "Kế toán", "Quản lý" });
+            this.cboNhomQuyen.Items.AddRange(new object[] { "Tất cả nhóm", "Sale", "Kế toán", "Quản lý", "Quản trị hệ thống" });
             this.cboNhomQuyen.SelectedIndex = 0;
 
             // cboTrangThai

@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_24a_DangKyThongTinKhach()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             LoadSampleData();
         }
 
@@ -51,12 +52,12 @@ namespace WindowsFormsApp1
             cboThoiHanThue.SelectedIndex = 2;
 
             // Ví dụ dữ liệu mẫu điền sẵn
-            txtHoTen.Text = "Nguyễn Văn An";
-            txtSoDienThoai.Text = "0901234567";
-            txtEmail.Text = "nguyenvanan@email.com";
+            txtHoTen.Text = "Trần Văn Toàn";
+            txtSoDienThoai.Text = "0987654321";
+            txtEmail.Text = "tranvantoan@email.com";
             radNam.Checked = true;
-            txtSoNguoi.Text = "2";
-            txtGhiChu.Text = "Cần phòng yên tĩnh, có điều hòa, gửi xe máy.";
+            txtSoNguoi.Text = "1";
+            txtGhiChu.Text = "Cần phòng gần trung tâm, ưu tiên có điều hòa, gửi xe máy.";
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)

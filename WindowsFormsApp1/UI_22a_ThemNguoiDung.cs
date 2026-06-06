@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
                 Size = new Size(w, 26),
                 DropDownStyle = ComboBoxStyle.DropDownList
             };
-            cboNhomQuyen.Items.AddRange(new object[] { "Sale", "Kế toán", "Quản lý" });
+            cboNhomQuyen.Items.AddRange(new object[] { "Sale", "Kế toán", "Quản lý", "Quản trị hệ thống" });
             cboNhomQuyen.SelectedIndex = 0;
 
             // Trạng thái
@@ -115,6 +115,7 @@ namespace WindowsFormsApp1
                 lblMatKhau, txtMatKhau, lblNhomQuyen, cboNhomQuyen,
                 lblTrangThai, cboTrangThai, btnLuu, btnHuy
             });
+            AppUiStyle.Apply(this);
         }
 
         private void BtnLuu_Click(object sender, EventArgs e)

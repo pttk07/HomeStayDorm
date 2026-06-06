@@ -8,6 +8,12 @@ namespace WindowsFormsApp1
         public UI_03_LapPhieuCoc()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
+            txtCustomerName.Text = "Trần Thị Bình";
+            txtSelectedRoom.Text = "P202 - Giường G202A";
+            txtDepositAmount.Text = "2200000";
+            dtpDepositDate.Value = new DateTime(2026, 6, 6);
+            dtpCheckIn.Value = new DateTime(2026, 6, 15, 14, 0, 0);
         }
 
         private void btnSave_Click(object sender, EventArgs e)

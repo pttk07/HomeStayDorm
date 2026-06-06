@@ -8,6 +8,7 @@ namespace WindowsFormsApp1
         public UI_14_DangNhap()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

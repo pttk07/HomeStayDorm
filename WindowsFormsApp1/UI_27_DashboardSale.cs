@@ -9,6 +9,7 @@ namespace WindowsFormsApp1
         public UI_27_DashboardSale()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             this.Load += UI_27_DashboardSale_Load;
         }
 
@@ -16,6 +17,7 @@ namespace WindowsFormsApp1
         {
             timerClock.Start();
             UpdateClock(null, null);
+            LoadHoatDongGanDay();
         }
 
         private void UpdateClock(object sender, EventArgs e)

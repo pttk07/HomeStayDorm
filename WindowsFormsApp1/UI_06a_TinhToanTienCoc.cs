@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_06a_TinhToanTienCoc()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void btnChonPhieu_Click(object sender, EventArgs e)

@@ -11,6 +11,7 @@ namespace WindowsFormsApp1
         public UI_22_QuanTriNguoiDung()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             this.Load += UI_22_QuanTriNguoiDung_Load;
         }
 
@@ -24,15 +25,14 @@ namespace WindowsFormsApp1
         {
             danhSach = new System.Collections.Generic.List<NguoiDung>
             {
-                new NguoiDung { MaND=1, HoTen="Nguyễn Văn An",    Email="an.nguyen@hsdorm.vn",    NhomQuyen="Sale",    TrangThai="Đang hoạt động", NgayTao="01/01/2025" },
-                new NguoiDung { MaND=2, HoTen="Trần Thị Bình",    Email="binh.tran@hsdorm.vn",    NhomQuyen="Sale",    TrangThai="Đang hoạt động", NgayTao="05/01/2025" },
-                new NguoiDung { MaND=3, HoTen="Lê Hoàng Cường",   Email="cuong.le@hsdorm.vn",     NhomQuyen="Sale",    TrangThai="Đã khóa",        NgayTao="10/01/2025" },
-                new NguoiDung { MaND=4, HoTen="Phạm Thị Dung",    Email="dung.pham@hsdorm.vn",    NhomQuyen="Kế toán", TrangThai="Đang hoạt động", NgayTao="02/02/2025" },
-                new NguoiDung { MaND=5, HoTen="Võ Minh Đức",      Email="duc.vo@hsdorm.vn",       NhomQuyen="Kế toán", TrangThai="Đang hoạt động", NgayTao="15/02/2025" },
-                new NguoiDung { MaND=6, HoTen="Hoàng Thị Lan",    Email="lan.hoang@hsdorm.vn",    NhomQuyen="Kế toán", TrangThai="Đang hoạt động", NgayTao="20/02/2025" },
-                new NguoiDung { MaND=7, HoTen="Đỗ Thanh Minh",    Email="minh.do@hsdorm.vn",      NhomQuyen="Quản lý", TrangThai="Đang hoạt động", NgayTao="01/03/2025" },
-                new NguoiDung { MaND=8, HoTen="Bùi Thị Ngọc",     Email="ngoc.bui@hsdorm.vn",     NhomQuyen="Quản lý", TrangThai="Đang hoạt động", NgayTao="10/03/2025" },
-                new NguoiDung { MaND=9, HoTen="Ngô Quốc Phong",   Email="phong.ngo@hsdorm.vn",    NhomQuyen="Quản lý", TrangThai="Đang hoạt động", NgayTao="15/03/2025" },
+                new NguoiDung { MaND=1, HoTen="Đỗ Thanh Quang",    Email="quang.do@hsdorm.vn",     NhomQuyen="Quản trị hệ thống", TrangThai="Đang hoạt động", NgayTao="01/01/2025" },
+                new NguoiDung { MaND=2, HoTen="Trần Văn Hải",       Email="hai.tran@hsdorm.vn",     NhomQuyen="Quản lý",           TrangThai="Đang hoạt động", NgayTao="01/02/2025" },
+                new NguoiDung { MaND=3, HoTen="Nguyễn Thị Thu",     Email="thu.nguyen@hsdorm.vn",   NhomQuyen="Quản lý",           TrangThai="Đang hoạt động", NgayTao="15/02/2025" },
+                new NguoiDung { MaND=4, HoTen="Lê Công Phúc",       Email="phuc.le@hsdorm.vn",      NhomQuyen="Sale",              TrangThai="Đang hoạt động", NgayTao="01/03/2025" },
+                new NguoiDung { MaND=5, HoTen="Phạm Tuấn Kiệt",     Email="kiet.pham@hsdorm.vn",    NhomQuyen="Sale",              TrangThai="Đang hoạt động", NgayTao="15/03/2025" },
+                new NguoiDung { MaND=6, HoTen="Vũ Thị Tuyết",       Email="tuyet.vu@hsdorm.vn",     NhomQuyen="Kế toán",           TrangThai="Đang hoạt động", NgayTao="01/04/2025" },
+                new NguoiDung { MaND=7, HoTen="Nguyễn Quang Huy",   Email="huy.nguyen@hsdorm.vn",   NhomQuyen="Kế toán",           TrangThai="Đang hoạt động", NgayTao="01/04/2025" },
+                new NguoiDung { MaND=8, HoTen="Trần Minh Khánh",    Email="khanh.tran@hsdorm.vn",   NhomQuyen="Sale",              TrangThai="Đã khóa",        NgayTao="01/05/2025" },
             };
         }
 
@@ -69,9 +69,10 @@ namespace WindowsFormsApp1
 
                 switch (nd.NhomQuyen)
                 {
-                    case "Sale": row.Cells["NhomQuyen"].Style.ForeColor = Color.FromArgb(30, 64, 140); break;
-                    case "Kế toán": row.Cells["NhomQuyen"].Style.ForeColor = Color.FromArgb(133, 79, 11); break;
-                    case "Quản lý": row.Cells["NhomQuyen"].Style.ForeColor = Color.FromArgb(80, 50, 140); break;
+                    case "Sale":                  row.Cells["NhomQuyen"].Style.ForeColor = Color.FromArgb(30, 64, 140);  break;
+                    case "Kế toán":               row.Cells["NhomQuyen"].Style.ForeColor = Color.FromArgb(133, 79, 11); break;
+                    case "Quản lý":               row.Cells["NhomQuyen"].Style.ForeColor = Color.FromArgb(80, 50, 140);  break;
+                    case "Quản trị hệ thống":     row.Cells["NhomQuyen"].Style.ForeColor = Color.FromArgb(163, 45, 45);  break;
                 }
             }
 

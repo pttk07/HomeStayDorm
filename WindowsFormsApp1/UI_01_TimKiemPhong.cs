@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(300, 20);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(288, 29);
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
             this.gbFilters.Controls.Add(this.lblMaxPrice);
             this.gbFilters.Controls.Add(this.numMaxPrice);
             this.gbFilters.Controls.Add(this.btnSearch);
-            this.gbFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbFilters.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gbFilters.Location = new System.Drawing.Point(30, 70);
             this.gbFilters.Name = "gbFilters";
             this.gbFilters.Size = new System.Drawing.Size(820, 140);
@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
             "Tất cả",
             "Quận 1",
             "Quận 3",
-            "Thủ Đức"});
+            "Quận 7"});
             this.cbLocation.Location = new System.Drawing.Point(90, 32);
             this.cbLocation.Name = "cbLocation";
             this.cbLocation.Size = new System.Drawing.Size(160, 26);
@@ -134,9 +134,8 @@ namespace WindowsFormsApp1
             this.cbRoomType.FormattingEnabled = true;
             this.cbRoomType.Items.AddRange(new object[] {
             "Tất cả",
-            "Phòng thường",
-            "Phòng Master",
-            "Giường Dorm"});
+            "Ghép",
+            "Nguyên căn"});
             this.cbRoomType.Location = new System.Drawing.Point(375, 32);
             this.cbRoomType.Name = "cbRoomType";
             this.cbRoomType.Size = new System.Drawing.Size(160, 26);
@@ -161,7 +160,7 @@ namespace WindowsFormsApp1
             "Tất cả",
             "Nam",
             "Nữ",
-            "Nam/Nữ"});
+            "Hỗn hợp"});
             this.cbGender.Location = new System.Drawing.Point(635, 32);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(160, 26);
@@ -231,8 +230,8 @@ namespace WindowsFormsApp1
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(30, 64, 140);
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(635, 75);
             this.btnSearch.Name = "btnSearch";
@@ -249,7 +248,7 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbResults.Controls.Add(this.dgvResults);
-            this.gbResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbResults.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gbResults.Location = new System.Drawing.Point(30, 230);
             this.gbResults.Name = "gbResults";
             this.gbResults.Size = new System.Drawing.Size(820, 300);
@@ -280,8 +279,8 @@ namespace WindowsFormsApp1
             // btnSelectRoom
             // 
             this.btnSelectRoom.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnSelectRoom.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnSelectRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectRoom.BackColor = System.Drawing.Color.FromArgb(15, 110, 86);
+            this.btnSelectRoom.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnSelectRoom.ForeColor = System.Drawing.Color.White;
             this.btnSelectRoom.Location = new System.Drawing.Point(360, 550);
             this.btnSelectRoom.Name = "btnSelectRoom";
@@ -315,43 +314,58 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            AppUiStyle.Apply(this);
         }
 
         private void UI_01_TimKiemPhong_Load(object sender, EventArgs e)
         {
-            // Thiết lập giá trị mặc định cho ComboBox
             cbLocation.SelectedIndex = 0;
             cbRoomType.SelectedIndex = 0;
             cbGender.SelectedIndex = 0;
 
-            // Thiết lập các cột cho DataGridView theo đúng Use Case
-            dgvResults.ColumnCount = 4;
-            dgvResults.Columns[0].Name = "Số phòng";
-            dgvResults.Columns[1].Name = "Vị trí giường";
-            dgvResults.Columns[2].Name = "Đơn giá";
-            dgvResults.Columns[3].Name = "Trạng thái hiện tại";
+            dgvResults.ColumnCount = 5;
+            dgvResults.Columns[0].Name = "MaPhong";   dgvResults.Columns[0].HeaderText = "Mã phòng";
+            dgvResults.Columns[1].Name = "ViTriGiuong"; dgvResults.Columns[1].HeaderText = "Vị trí giường";
+            dgvResults.Columns[2].Name = "GiaThue";   dgvResults.Columns[2].HeaderText = "Đơn giá / tháng";
+            dgvResults.Columns[3].Name = "KhuVuc";    dgvResults.Columns[3].HeaderText = "Khu vực";
+            dgvResults.Columns[4].Name = "TrangThai"; dgvResults.Columns[4].HeaderText = "Trạng thái";
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvResults.Rows.Clear();
-            
-            // Lấy điều kiện tìm kiếm
-            string location = cbLocation.Text;
-            string roomType = cbRoomType.Text;
-            
-            // Xử lý tìm kiếm giả lập
-            if (location == "Tất cả" || (location == "Quận 1" && roomType == "Phòng thường"))
+
+            // Demo: luôn trả về dữ liệu mẫu đầy đủ, lọc theo bộ lọc đã chọn
+            var allRooms = new[]
             {
-               dgvResults.Rows.Add("101", "N/A", "2,000,000", "Trống");
-               dgvResults.Rows.Add("102", "Giường tầng 1", "1,500,000", "Trống");
-            }
-            else
+                new[]{ "P103",  "-",              "3.500.000 VNĐ", "Q1 - Nam",      "Trống" },
+                new[]{ "P302",  "-",              "3.200.000 VNĐ", "Q7 - Nữ",       "Trống" },
+                new[]{ "P101 - G101C", "Tầng trên",   "2.000.000 VNĐ", "Q1 - Nam",      "Trống" },
+                new[]{ "P102 - G102B", "Tầng dưới",   "2.100.000 VNĐ", "Q1 - Nữ",       "Trống" },
+                new[]{ "P201 - G201B", "Tầng dưới",   "1.800.000 VNĐ", "Q3 - Hỗn hợp", "Trống" },
+            };
+
+            string location  = cbLocation.Text;
+            string roomType  = cbRoomType.Text;
+            string gender    = cbGender.Text;
+            decimal minPrice = numMinPrice.Value;
+            decimal maxPrice = numMaxPrice.Value == 0 ? 20000000 : numMaxPrice.Value;
+
+            foreach (var r in allRooms)
             {
-                // Dòng sự kiện phụ: Không tìm thấy kết quả
-                MessageBox.Show("Không tìm thấy kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool matchLoc  = location == "Tất cả" || r[3].Contains(location.Replace("Quận ", "Q"));
+                bool matchGend = gender   == "Tất cả" || r[3].Contains(gender);
+                decimal gia     = decimal.TryParse(r[2].Replace(".", "").Replace(" VNĐ", ""), out decimal g) ? g : 0;
+                bool matchPrice = (minPrice == 0 || gia >= minPrice) && (maxPrice == 0 || gia <= maxPrice);
+                bool matchRoomType = roomType == "Tất cả" || (roomType == "Nguyên căn" && (r[0].StartsWith("P103") || r[0].StartsWith("P302"))) || (roomType == "Ghép" && !r[0].StartsWith("P103") && !r[0].StartsWith("P302"));
+
+                if (matchLoc && matchGend && matchPrice && matchRoomType)
+                    dgvResults.Rows.Add(r[0], r[1], r[2], r[3], r[4]);
             }
+
+            if (dgvResults.Rows.Count == 0)
+                MessageBox.Show("Không tìm thấy phòng phù hợp với bộ lọc.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnSelectRoom_Click(object sender, EventArgs e)
@@ -359,25 +373,25 @@ namespace WindowsFormsApp1
             if (dgvResults.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dgvResults.SelectedRows[0];
-                string status = row.Cells[3].Value?.ToString();
+                string status = row.Cells["TrangThai"].Value?.ToString();
 
-                if (status != "Trống" && status != "Đang trống")
+                if (status != "Trống")
                 {
-                    MessageBox.Show("Vui lòng chọn phòng có trạng thái 'Trống' để tiếp tục.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Vui lòng chọn phòng có trạng thái 'Trống' để tiếp tục.", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Lấy thông tin phòng đã chọn và mở UI_01a
                 UI_01a_GhiNhanKetQuaChonPhong confirmForm = new UI_01a_GhiNhanKetQuaChonPhong();
-                confirmForm.RoomNumber = row.Cells[0].Value?.ToString();
-                confirmForm.BedPosition = row.Cells[1].Value?.ToString();
-                confirmForm.Price = row.Cells[2].Value?.ToString();
-                
+                confirmForm.RoomNumber  = row.Cells["MaPhong"].Value?.ToString();
+                confirmForm.BedPosition = row.Cells["ViTriGiuong"].Value?.ToString();
+                confirmForm.Price       = row.Cells["GiaThue"].Value?.ToString();
                 confirmForm.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn một phòng từ danh sách.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn một phòng từ danh sách.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

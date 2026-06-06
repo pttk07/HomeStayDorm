@@ -8,6 +8,7 @@ namespace WindowsFormsApp1
         public UI_04_TiepNhanThanhToan()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

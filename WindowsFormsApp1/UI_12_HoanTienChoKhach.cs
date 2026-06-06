@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_12_HoanTienChoKhach()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             refundFilePath = Path.Combine(Application.StartupPath, "hoan_tien_giao_dich.xml");
         }
 
@@ -22,15 +23,15 @@ namespace WindowsFormsApp1
         {
             txtSearchCustomer.Text = string.Empty;
             dataGridViewDoiSoat.Rows.Clear();
-            lblSoTienCoc.Text = "Số tiền cọc: 0 đ";
-            lblTongKhauTru.Text = "Tổng khấu trừ: 0 đ";
+            lblSoTienCoc.Text = "Số tiền cọc: 0 VNĐ";
+            lblTongKhauTru.Text = "Tổng khấu trừ: 0 VNĐ";
             txtSoTienHoan.Text = string.Empty;
             cmbPhuongThuc.SelectedIndex = 0;
             lblStatus.Text = string.Empty;
 
-            // Dữ liệu mẫu để demo. Thực tế: lấy từ bảng đối soát theo khách hàng.
-            dataGridViewDoiSoat.Rows.Add("HD001", "Nguyễn Văn A", "2.000.000", "200.000", "1.800.000", "Chưa hoàn");
-            dataGridViewDoiSoat.Rows.Add("HD002", "Trần Thị B", "1.000.000", "0", "1.000.000", "Đã hoàn");
+            dataGridViewDoiSoat.Rows.Add("HD-2503-007", "Bùi Thị Ngọc",   "2.100.000", "650.000", "1.450.000", "Chưa hoàn");
+            dataGridViewDoiSoat.Rows.Add("HD-2502-008", "Ngô Quốc Phong", "1.800.000", "0",       "1.800.000", "Đã hoàn");
+            dataGridViewDoiSoat.Rows.Add("HD-2411-009", "Phan Thị Xuân",  "2.000.000", "500.000", "1.500.000", "Chờ xử lý");
         }
 
         private void btnTraCuu_Click(object sender, EventArgs e)

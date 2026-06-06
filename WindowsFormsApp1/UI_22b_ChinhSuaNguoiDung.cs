@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
                 Size = new Size(w, 26),
                 DropDownStyle = ComboBoxStyle.DropDownList
             };
-            cboNhomQuyen.Items.AddRange(new object[] { "Sale", "Kế toán", "Quản lý" });
+            cboNhomQuyen.Items.AddRange(new object[] { "Sale", "Kế toán", "Quản lý", "Quản trị hệ thống" });
             cboNhomQuyen.SelectedItem = _nd.NhomQuyen;
             Add(cboNhomQuyen);
 
@@ -95,6 +95,7 @@ namespace WindowsFormsApp1
             btnHuy.Click += (s, e) => { this.DialogResult = DialogResult.Cancel; this.Close(); };
 
             Add(btnLuu); Add(btnHuy);
+            AppUiStyle.Apply(this);
         }
 
         private void BtnLuu_Click(object sender, EventArgs e)

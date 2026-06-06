@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(300, 20);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(201, 29);
@@ -237,7 +237,7 @@ namespace WindowsFormsApp1
             // 
             this.btnCreateContract.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCreateContract.Enabled = false;
-            this.btnCreateContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateContract.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCreateContract.Location = new System.Drawing.Point(340, 500);
             this.btnCreateContract.Name = "btnCreateContract";
             this.btnCreateContract.Size = new System.Drawing.Size(150, 40);
@@ -259,7 +259,7 @@ namespace WindowsFormsApp1
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
             this.ResumeLayout(false);
-
+            AppUiStyle.Apply(this);
         }
 
         private void UI_02_LapHopDong_Load(object sender, EventArgs e)
@@ -281,20 +281,26 @@ namespace WindowsFormsApp1
                 txtDepositCode.Text = searchForm.SelectedDepositCode;
                 txtCustomerInfo.Text = searchForm.SelectedCustomerName;
                 
-                // Clear existing and add selected room
                 dgvRooms.Rows.Clear();
-                // Giả lập lấy chi tiết phòng dựa theo mã phòng trả về
                 string roomNum = searchForm.SelectedRoom;
-                if (roomNum == "101")
-                    dgvRooms.Rows.Add("101", "5,000,000", "Đang trống", "Giường Master");
-                else if (roomNum == "102")
-                    dgvRooms.Rows.Add("102", "1,500,000", "Đang trống", "Giường tầng 1");
+                if (roomNum != null && roomNum.StartsWith("P202"))
+                {
+                    dgvRooms.Rows.Add("P202 - G202A", "2.200.000 VNĐ", "Trống", "Tầng dưới");
+                    txtTotalCost.Text = "2.200.000 VNĐ / tháng";
+                }
+                else if (roomNum != null && roomNum.StartsWith("P103"))
+                {
+                    dgvRooms.Rows.Add("P103", "3.500.000 VNĐ", "Trống", "Nguyên căn");
+                    txtTotalCost.Text = "3.500.000 VNĐ / tháng";
+                }
                 else
-                    dgvRooms.Rows.Add(roomNum, "2,000,000", "Đang trống", "N/A");
-                
-                txtDuration.Text = "01/10/2023 - 01/10/2024 (12 tháng)";
-                txtTotalCost.Text = "5,000,000 VNĐ/tháng";
-                txtTerms.Text = "- Cọc 1 tháng tiền nhà.\r\n- Thanh toán vào ngày 1-5 hàng tháng.\r\n- Không được nuôi thú cưng.";
+                {
+                    dgvRooms.Rows.Add(roomNum ?? "-", "2.000.000 VNĐ", "Trống", "-");
+                    txtTotalCost.Text = "2.000.000 VNĐ / tháng";
+                }
+
+                txtDuration.Text = "15/06/2026 – 14/06/2027  (12 tháng)";
+                txtTerms.Text = "- Cọc 1 tháng tiền nhà.\r\n- Thanh toán vào ngày 1–5 hàng tháng.\r\n- Không được nuôi thú cưng.\r\n- Không tổ chức tiệc gây ồn sau 22:00.";
                 
                 btnCreateContract.Enabled = true; 
             }

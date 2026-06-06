@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
         public UI_02a_TraCuuPhieuDatCoc()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void UI_02a_TraCuuPhieuDatCoc_Load(object sender, EventArgs e)
@@ -29,17 +30,29 @@ namespace WindowsFormsApp1
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvResults.Rows.Clear();
-            string keyword = txtSearchKeyword.Text.Trim();
 
-            if (string.IsNullOrEmpty(keyword))
+            var allPhieu = new[]
             {
-                MessageBox.Show("Vui lòng nhập Mã phiếu cọc, Tên hoặc SĐT để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                new[]{ "PC-2506-001", "Trần Thị Bình",    "P202 - G202A", "05/06/2026" },
+                new[]{ "PC-2506-002", "Phạm Thị Dung",    "P103",         "06/06/2026" },
+                new[]{ "PC-2506-003", "Nguyễn Thị Lan",   "P102 - G102B", "04/06/2026" },
+                new[]{ "PC-2506-004", "Phan Văn Bình",     "P201 - G201B", "03/06/2026" },
+            };
+
+            string keyword = txtSearchKeyword.Text.Trim().ToLower();
+            foreach (var p in allPhieu)
+            {
+                bool match = string.IsNullOrEmpty(keyword)
+                    || p[0].ToLower().Contains(keyword)
+                    || p[1].ToLower().Contains(keyword)
+                    || p[2].ToLower().Contains(keyword);
+                if (match)
+                    dgvResults.Rows.Add(p[0], p[1], p[2], p[3]);
             }
 
-            // Dữ liệu giả lập
-            dgvResults.Rows.Add("PC001", "Nguyễn Văn A", "101", "15/09/2023");
-            dgvResults.Rows.Add("PC002", "Trần Thị B", "102", "16/09/2023");
+            if (dgvResults.Rows.Count == 0)
+                MessageBox.Show("Không tìm thấy phiếu cọc phù hợp.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnSelect_Click(object sender, EventArgs e)

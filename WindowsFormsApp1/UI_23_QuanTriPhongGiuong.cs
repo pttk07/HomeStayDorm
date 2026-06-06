@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
         public UI_23_QuanTriPhongGiuong()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             this.Load += UI_23_QuanTriPhongGiuong_Load;
         }
 
@@ -29,7 +30,7 @@ namespace WindowsFormsApp1
             {
                 new Phong { MaPhong="P101", ChiNhanh="Q1",  KhuVuc="Nam",      LoaiPhong="Ghép",       SucChua=4, GiaThue=2000000, TienNghi="Điều hòa, Wifi",            TrangThai="Đang ở"     },
                 new Phong { MaPhong="P102", ChiNhanh="Q1",  KhuVuc="Nữ",       LoaiPhong="Ghép",       SucChua=4, GiaThue=2100000, TienNghi="Điều hòa, Wifi, Tủ lạnh",   TrangThai="Đang ở"     },
-                new Phong { MaPhong="P103", ChiNhanh="Q1",  KhuVuc="Nam",      LoaiPhong="Nguyên căn", SucChua=2, GiaThue=3500000, TienNghi="Điều hòa, Wifi, WC riêng",  TrangThai="Trống"      },
+                new Phong { MaPhong="P103", ChiNhanh="Q1",  KhuVuc="Nam",      LoaiPhong="Nguyên căn", SucChua=2, GiaThue=3500000, TienNghi="Điều hòa, Wifi, WC riêng",  TrangThai="Đã đặt cọc" },
                 new Phong { MaPhong="P201", ChiNhanh="Q3",  KhuVuc="Hỗn hợp", LoaiPhong="Ghép",       SucChua=6, GiaThue=1800000, TienNghi="Wifi, Quạt",                 TrangThai="Đang ở"     },
                 new Phong { MaPhong="P202", ChiNhanh="Q3",  KhuVuc="Nữ",       LoaiPhong="Ghép",       SucChua=4, GiaThue=2200000, TienNghi="Điều hòa, Wifi",            TrangThai="Đã đặt cọc" },
                 new Phong { MaPhong="P301", ChiNhanh="Q7",  KhuVuc="Nam",      LoaiPhong="Ghép",       SucChua=4, GiaThue=1900000, TienNghi="Wifi, Tủ lạnh",             TrangThai="Bảo trì"    },
@@ -44,12 +45,12 @@ namespace WindowsFormsApp1
                 new Giuong { MaGiuong="G101D", MaPhong="P101", ViTri="Tầng trên",            TrangThai="Đang ở",     GhiChu="" },
                 new Giuong { MaGiuong="G102A", MaPhong="P102", ViTri="Tầng dưới (cửa sổ)", TrangThai="Đang ở",     GhiChu="" },
                 new Giuong { MaGiuong="G102B", MaPhong="P102", ViTri="Tầng dưới",           TrangThai="Trống",      GhiChu="Mới dọn" },
-                new Giuong { MaGiuong="G102C", MaPhong="P102", ViTri="Tầng trên",            TrangThai="Đang ở",     GhiChu="" },
+                new Giuong { MaGiuong="G102C", MaPhong="P102", ViTri="Tầng trên",            TrangThai="Trống",      GhiChu="Khách đã trả phòng" },
                 new Giuong { MaGiuong="G102D", MaPhong="P102", ViTri="Tầng trên",            TrangThai="Đang ở",     GhiChu="" },
                 new Giuong { MaGiuong="G201A", MaPhong="P201", ViTri="Tầng dưới (cửa sổ)", TrangThai="Đang ở",     GhiChu="" },
-                new Giuong { MaGiuong="G201B", MaPhong="P201", ViTri="Tầng dưới",           TrangThai="Trống",      GhiChu="" },
-                new Giuong { MaGiuong="G202A", MaPhong="P202", ViTri="Tầng dưới",           TrangThai="Đã đặt cọc", GhiChu="Cọc 05/06" },
-                new Giuong { MaGiuong="G202B", MaPhong="P202", ViTri="Tầng trên",            TrangThai="Đã đặt cọc", GhiChu="Cọc 05/06" },
+                new Giuong { MaGiuong="G201B", MaPhong="P201", ViTri="Tầng dưới",           TrangThai="Trống",      GhiChu="Khách đã trả phòng" },
+                new Giuong { MaGiuong="G202A", MaPhong="P202", ViTri="Tầng dưới",           TrangThai="Đã đặt cọc", GhiChu="PC-2506-001 (05/06)" },
+                new Giuong { MaGiuong="G202B", MaPhong="P202", ViTri="Tầng trên",            TrangThai="Trống",      GhiChu="" },
                 new Giuong { MaGiuong="G301A", MaPhong="P301", ViTri="Tầng dưới",           TrangThai="Bảo trì",    GhiChu="Hỏng khung giường" },
             };
         }

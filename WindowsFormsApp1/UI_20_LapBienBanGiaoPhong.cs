@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public UI_20_LapBienBanGiaoPhong()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -68,11 +69,12 @@ namespace WindowsFormsApp1
                 ghiChuColumn
             );
 
-            // Ví dụ thêm dữ liệu mẫu
-            thongTinBienBan.Rows.Add("Tivi", 1, "Đầy đủ", false, "");
-            thongTinBienBan.Rows.Add("Bàn", 1, "Hư hỏng", false, "Trầy xước mặt bàn");
-            thongTinBienBan.Rows.Add("Ghế", 4, "Thiếu", false, "Thiếu 1 ghế");
-            thongTinBienBan.Rows.Add("Quạt", 1, "Đầy đủ", false, "");
+            thongTinBienBan.Rows.Add("Tivi LED 32\"",      1, "Đầy đủ",   false, "");
+            thongTinBienBan.Rows.Add("Bàn làm việc",      1, "Hư hỏng",  false, "Trầy xước mặt bàn");
+            thongTinBienBan.Rows.Add("Ghế văn phòng",     4, "Thiếu",    false, "Thiếu 1 ghế");
+            thongTinBienBan.Rows.Add("Quạt trần",         1, "Đầy đủ",   false, "");
+            thongTinBienBan.Rows.Add("Tủ quần áo",        1, "Đầy đủ",   false, "");
+            thongTinBienBan.Rows.Add("Điều hòa Daikin",   1, "Đầy đủ",   false, "");
         }
     }
 }

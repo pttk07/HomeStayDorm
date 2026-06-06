@@ -8,32 +8,34 @@ namespace WindowsFormsApp1
         public UI_10_DoiChieuThanhToan()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
         }
 
-        // Event handlers use camelCase naming and UI messages are Vietnamese.
         private void formLoad(object sender, EventArgs e)
         {
-            // Ví dụ khởi tạo dữ liệu mặc định (có thể thay bằng gọi DB)
             txtTimKiem.Text = string.Empty;
-            dateTimePickerFrom.Value = DateTime.Today.AddDays(-7);
-            dateTimePickerTo.Value = DateTime.Today;
+            dateTimePickerFrom.Value = new DateTime(2026, 5, 1);
+            dateTimePickerTo.Value = new DateTime(2026, 6, 6);
             dataGridViewThanhToan.Rows.Clear();
 
-            // Thêm hàng mẫu để minh họa
-            dataGridViewThanhToan.Rows.Add("HD001", DateTime.Today.AddDays(-2).ToString("yyyy-MM-dd"), "1,200,000", "Chưa đối chiếu");
-            dataGridViewThanhToan.Rows.Add("HD002", DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd"), "850,000", "Đã đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-001", "01/06/2026", "2.000.000", "Đã đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-002", "01/06/2026", "1.800.000", "Đã đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-003", "01/06/2026", "2.000.000", "Đã đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2505-004", "01/06/2026", "2.100.000", "Chưa đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-005", "01/06/2026", "2.000.000", "Chưa đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-006", "01/06/2026", "2.100.000", "Chưa đối chiếu");
         }
 
         private void btnTaiDuLieu_Click(object sender, EventArgs e)
         {
-            // TODO: tải dữ liệu từ nguồn (DB, API...). Hiện hiển thị MessageBox tạm thời.
-            MessageBox.Show("Tải dữ liệu theo khoảng thời gian đã chọn.", "Tải dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Ví dụ: lọc theo ngày (thực tế: thay bằng truy vấn)
-            // Ở đây chỉ làm demo: xóa và thêm lại mẫu
             dataGridViewThanhToan.Rows.Clear();
-            dataGridViewThanhToan.Rows.Add("HD010", dateTimePickerFrom.Value.ToString("yyyy-MM-dd"), "500,000", "Chưa đối chiếu");
-            dataGridViewThanhToan.Rows.Add("HD011", dateTimePickerTo.Value.ToString("yyyy-MM-dd"), "2,000,000", "Chưa đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-001", "01/06/2026", "2.000.000", "Đã đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-002", "01/06/2026", "1.800.000", "Đã đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-003", "01/06/2026", "2.000.000", "Đã đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2505-004", "01/06/2026", "2.100.000", "Chưa đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-005", "01/06/2026", "2.000.000", "Chưa đối chiếu");
+            dataGridViewThanhToan.Rows.Add("HD-2504-006", "01/06/2026", "2.100.000", "Chưa đối chiếu");
+            MessageBox.Show("Đã tải dữ liệu.", "Tải dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnDoiChieu_Click(object sender, EventArgs e)

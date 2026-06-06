@@ -15,33 +15,38 @@ namespace WindowsFormsApp1
         public UI_11_TinhKhoanCanThanhToan()
         {
             InitializeComponent();
+            AppUiStyle.Apply(this);
             ketQuaFilePath = Path.Combine(Application.StartupPath, "doi_chieu_ketqua.xml");
         }
 
         private void formLoad(object sender, EventArgs e)
         {
             txtTimKiem.Text = string.Empty;
-            dateTimePickerFrom.Value = DateTime.Today.AddDays(-30);
-            dateTimePickerTo.Value = DateTime.Today;
+            dateTimePickerFrom.Value = new DateTime(2026, 5, 1);
+            dateTimePickerTo.Value = new DateTime(2026, 6, 6);
             dataGridViewTinhKhoan.Rows.Clear();
 
-            // Hàng mẫu minh họa (cột: Mã hợp đồng, Ngày, Số tiền yêu cầu, Số tiền thực tế, Phương thức, Chứng từ số, Chứng từ ngày, Trạng thái)
-            dataGridViewTinhKhoan.Rows.Add("HD100", DateTime.Today.AddDays(-10).ToString("yyyy-MM-dd"), "1.500.000", "", "Tiền mặt", "BL-20260601-001", DateTime.Today.AddDays(-9).ToString("yyyy-MM-dd"), "");
-            dataGridViewTinhKhoan.Rows.Add("HD101", DateTime.Today.AddDays(-5).ToString("yyyy-MM-dd"), "750.000", "", "Chuyển khoản", "", "", "");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-001", "01/06/2026", "2.000.000", "2.000.000", "Chuyển khoản", "BL-20260601-001", "01/06/2026", "Thanh toán hợp lệ");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-002", "01/06/2026", "1.800.000", "1.800.000", "Tiền mặt",     "BL-20260601-002", "01/06/2026", "Thanh toán hợp lệ");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-003", "01/06/2026", "2.000.000", "",           "Chuyển khoản", "",                "",            "Chưa thanh toán");
+            dataGridViewTinhKhoan.Rows.Add("HD-2505-004", "01/06/2026", "2.100.000", "",           "Tiền mặt",     "",                "",            "Chờ xử lý");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-005", "01/06/2026", "2.000.000", "",           "Chuyển khoản", "",                "",            "Chờ xử lý");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-006", "01/06/2026", "2.100.000", "",           "Tiền mặt",     "",                "",            "Chờ xử lý");
 
-            lblTongTien.Text = "Tổng hợp đồng: 2 mục";
+            lblTongTien.Text = $"Tổng hợp đồng: {dataGridViewTinhKhoan.Rows.Count} mục";
         }
 
         private void btnTaiDuLieu_Click(object sender, EventArgs e)
         {
-            // Thực tế: gọi DB hoặc API theo khoảng ngày
-            MessageBox.Show("Tải dữ liệu theo khoảng ngày đã chọn.", "Tải dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             dataGridViewTinhKhoan.Rows.Clear();
-            dataGridViewTinhKhoan.Rows.Add("HD200", dateTimePickerFrom.Value.ToString("yyyy-MM-dd"), "2.000.000", "", "Chuyển khoản", "", "", "");
-            dataGridViewTinhKhoan.Rows.Add("HD201", dateTimePickerTo.Value.ToString("yyyy-MM-dd"), "1.200.000", "", "Tiền mặt", "", "", "");
-            dataGridViewTinhKhoan.Rows.Add("HD202", DateTime.Today.ToString("yyyy-MM-dd"), "500.000", "", "Chuyển khoản", "", "", "");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-001", "01/06/2026", "2.000.000", "2.000.000", "Chuyển khoản", "BL-20260601-001", "01/06/2026", "Thanh toán hợp lệ");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-002", "01/06/2026", "1.800.000", "1.800.000", "Tiền mặt",     "BL-20260601-002", "01/06/2026", "Thanh toán hợp lệ");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-003", "01/06/2026", "2.000.000", "",           "Chuyển khoản", "",                "",            "Chưa thanh toán");
+            dataGridViewTinhKhoan.Rows.Add("HD-2505-004", "01/06/2026", "2.100.000", "",           "Tiền mặt",     "",                "",            "Chờ xử lý");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-005", "01/06/2026", "2.000.000", "",           "Chuyển khoản", "",                "",            "Chờ xử lý");
+            dataGridViewTinhKhoan.Rows.Add("HD-2504-006", "01/06/2026", "2.100.000", "",           "Tiền mặt",     "",                "",            "Chờ xử lý");
             lblTongTien.Text = $"Tổng hợp đồng: {dataGridViewTinhKhoan.Rows.Count} mục";
+            MessageBox.Show("Đã tải dữ liệu.", "Tải dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnDoiChieu_Click(object sender, EventArgs e)

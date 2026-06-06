@@ -1,4 +1,4 @@
-namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp1
 {
     partial class UI_18_CapNhatTrangThaiPhongTrong
     {
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             this.danhSachPhongGiuongChoCapNhat.Name = "danhSachPhongGiuongChoCapNhat";
             this.danhSachPhongGiuongChoCapNhat.Size = new System.Drawing.Size(327, 20);
             this.danhSachPhongGiuongChoCapNhat.TabIndex = 0;
-            this.danhSachPhongGiuongChoCapNhat.Text = "Danh s�ch ph�ng & Giu?ng ch? c?p nh?t";
+            this.danhSachPhongGiuongChoCapNhat.Text = "Danh sách phòng & giường chờ cập nhật";
             // 
             // dataGridView1
             // 
@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
             this.chonPhong.Name = "chonPhong";
             this.chonPhong.Size = new System.Drawing.Size(106, 20);
             this.chonPhong.TabIndex = 2;
-            this.chonPhong.Text = "Ch?n ph�ng";
+            this.chonPhong.Text = "Chọn phòng";
             this.chonPhong.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Ng�y ghi nh?n";
+            this.label1.Text = "Ngày ghi nhận";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ngayGhiNhan
@@ -133,7 +133,7 @@ namespace WindowsFormsApp1
             this.lamMoiButton.Name = "lamMoiButton";
             this.lamMoiButton.Size = new System.Drawing.Size(148, 27);
             this.lamMoiButton.TabIndex = 7;
-            this.lamMoiButton.Text = "L�m m?i";
+            this.lamMoiButton.Text = "Làm mới";
             this.lamMoiButton.UseVisualStyleBackColor = true;
             // 
             // thongTinHopDong
@@ -147,7 +147,7 @@ namespace WindowsFormsApp1
             this.thongTinHopDong.Size = new System.Drawing.Size(687, 66);
             this.thongTinHopDong.TabIndex = 8;
             this.thongTinHopDong.TabStop = false;
-            this.thongTinHopDong.Text = "Th�ng tin h?p d?ng";
+            this.thongTinHopDong.Text = "Thông tin hợp đồng";
             // 
             // soHopDong
             // 
@@ -156,7 +156,7 @@ namespace WindowsFormsApp1
             this.soHopDong.Name = "soHopDong";
             this.soHopDong.Size = new System.Drawing.Size(112, 20);
             this.soHopDong.TabIndex = 0;
-            this.soHopDong.Text = "M� H?p �?ng:";
+            this.soHopDong.Text = "Mã Hợp Đồng:";
             // 
             // maHopDong
             // 
@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
             this.trangThaiHopDong.Name = "trangThaiHopDong";
             this.trangThaiHopDong.Size = new System.Drawing.Size(151, 20);
             this.trangThaiHopDong.TabIndex = 2;
-            this.trangThaiHopDong.Text = "Tr?ng th�i h?p d?ng";
+            this.trangThaiHopDong.Text = "Trạng thái hợp đồng";
             this.trangThaiHopDong.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // textBox1
@@ -191,7 +191,7 @@ namespace WindowsFormsApp1
             this.tinhTrangThanhToan.Size = new System.Drawing.Size(687, 66);
             this.tinhTrangThanhToan.TabIndex = 9;
             this.tinhTrangThanhToan.TabStop = false;
-            this.tinhTrangThanhToan.Text = "T�nh tr?ng thanh to�n";
+            this.tinhTrangThanhToan.Text = "Tình trạng thanh toán";
             this.tinhTrangThanhToan.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox3
@@ -208,7 +208,7 @@ namespace WindowsFormsApp1
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 20);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Tr?ng th�i thanh to�n";
+            this.label3.Text = "Trạng thái thanh toán";
             // 
             // capNhatTrangThai
             // 
@@ -221,7 +221,7 @@ namespace WindowsFormsApp1
             this.capNhatTrangThai.Size = new System.Drawing.Size(687, 124);
             this.capNhatTrangThai.TabIndex = 10;
             this.capNhatTrangThai.TabStop = false;
-            this.capNhatTrangThai.Text = "C?p nh?t tr?ng th�i";
+            this.capNhatTrangThai.Text = "Cập nhật trạng thái";
             // 
             // chonTrangThaiMoi
             // 
@@ -230,7 +230,7 @@ namespace WindowsFormsApp1
             this.chonTrangThaiMoi.Name = "chonTrangThaiMoi";
             this.chonTrangThaiMoi.Size = new System.Drawing.Size(147, 20);
             this.chonTrangThaiMoi.TabIndex = 2;
-            this.chonTrangThaiMoi.Text = "Ch?n tr?ng th�i m?i";
+            this.chonTrangThaiMoi.Text = "Chọn trạng thái mới";
             // 
             // trangThaiHienTai
             // 
@@ -248,7 +248,7 @@ namespace WindowsFormsApp1
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Tr?ng th�i hi?n t?i";
+            this.label4.Text = "Trạng thái hiện tại";
             // 
             // comboBox2
             // 
@@ -270,7 +270,7 @@ namespace WindowsFormsApp1
             this.hoanThanhButton.Name = "hoanThanhButton";
             this.hoanThanhButton.Size = new System.Drawing.Size(249, 48);
             this.hoanThanhButton.TabIndex = 11;
-            this.hoanThanhButton.Text = "Ho�n Th�nh";
+            this.hoanThanhButton.Text = "Hoàn Thành";
             this.hoanThanhButton.UseVisualStyleBackColor = false;
             this.hoanThanhButton.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -299,7 +299,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.danhSachPhongGiuongChoCapNhat);
             this.Name = "UI_18_CapNhatTrangThaiPhongTrong";
-            this.Text = "C?p nh?t tr?ng th�i ph�ng tr?ng";
+            this.Text = "Cập nhật trạng thái phòng trống";
             this.Load += new System.EventHandler(this.UI_18_CapNhatTrangThaiPhongTrong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.thongTinHopDong.ResumeLayout(false);

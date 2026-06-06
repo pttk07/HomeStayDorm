@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
 
         private void UI_26_DashboardQTHethong_Load(object sender, EventArgs e)
         {
-            LoadRecentActivity();
             timerClock.Start();
             timerClock_Tick(null, null); // init immediately
         }

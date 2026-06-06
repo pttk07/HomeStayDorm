@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
         {
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            dateTimePicker1.Value = DateTime.Now; // t? ch?n ngày hi?n t?i
+            dateTimePicker1.Value = DateTime.Now; // tự chọn ngày hiện tại
         }
 
         private void button1_Click(object sender, EventArgs e)

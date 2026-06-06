@@ -1,4 +1,4 @@
-namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp1
 {
     partial class UI_16_KiemTraDieuKienKhachThue
     {
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
             this.radioCaNhan.Name = "radioCaNhan";
             this.radioCaNhan.Size = new System.Drawing.Size(140, 24);
             this.radioCaNhan.TabIndex = 0;
-            this.radioCaNhan.Text = "Kh�ch c� nh�n";
+            this.radioCaNhan.Text = "Khách cá nhân";
             this.radioCaNhan.UseVisualStyleBackColor = true;
             // 
             // radioNhom
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             this.radioNhom.Name = "radioNhom";
             this.radioNhom.Size = new System.Drawing.Size(159, 24);
             this.radioNhom.TabIndex = 1;
-            this.radioNhom.Text = "Kh�ch theo nh�m";
+            this.radioNhom.Text = "Khách theo nhóm";
             this.radioNhom.UseVisualStyleBackColor = true;
             // 
             // maKhachTextBox
@@ -90,7 +90,7 @@ namespace WindowsFormsApp1
             this.traCuuButton.Name = "traCuuButton";
             this.traCuuButton.Size = new System.Drawing.Size(100, 34);
             this.traCuuButton.TabIndex = 4;
-            this.traCuuButton.Text = "Tra c?u";
+            this.traCuuButton.Text = "Tra cứu";
             this.traCuuButton.UseVisualStyleBackColor = false;
             this.traCuuButton.Click += new System.EventHandler(this.traCuuButton_Click);
             // 
@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
             this.soTienLabel.Name = "soTienLabel";
             this.soTienLabel.Size = new System.Drawing.Size(72, 20);
             this.soTienLabel.TabIndex = 6;
-            this.soTienLabel.Text = "S? ti?n: -";
+            this.soTienLabel.Text = "Số tiền: -";
             // 
             // ngayDatLabel
             // 
@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
             this.ngayDatLabel.Name = "ngayDatLabel";
             this.ngayDatLabel.Size = new System.Drawing.Size(85, 20);
             this.ngayDatLabel.TabIndex = 7;
-            this.ngayDatLabel.Text = "Ng�y d?t: -";
+            this.ngayDatLabel.Text = "Ngày đặt: -";
             // 
             // trangThaiLabel
             // 
@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             this.trangThaiLabel.Name = "trangThaiLabel";
             this.trangThaiLabel.Size = new System.Drawing.Size(93, 20);
             this.trangThaiLabel.TabIndex = 8;
-            this.trangThaiLabel.Text = "Tr?ng th�i: -";
+            this.trangThaiLabel.Text = "Trạng thái: -";
             // 
             // phongLabel
             // 
@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
             this.phongLabel.Name = "phongLabel";
             this.phongLabel.Size = new System.Drawing.Size(68, 20);
             this.phongLabel.TabIndex = 9;
-            this.phongLabel.Text = "Ph�ng: -";
+            this.phongLabel.Text = "Phòng: -";
             // 
             // xacNhanButton
             // 
@@ -147,7 +147,7 @@ namespace WindowsFormsApp1
             this.xacNhanButton.Name = "xacNhanButton";
             this.xacNhanButton.Size = new System.Drawing.Size(120, 44);
             this.xacNhanButton.TabIndex = 10;
-            this.xacNhanButton.Text = "X�c nh?n";
+            this.xacNhanButton.Text = "Xác nhận";
             this.xacNhanButton.UseVisualStyleBackColor = false;
             this.xacNhanButton.Click += new System.EventHandler(this.xacNhanButton_Click);
             // 
@@ -158,7 +158,7 @@ namespace WindowsFormsApp1
             this.maKhachHang.Name = "maKhachHang";
             this.maKhachHang.Size = new System.Drawing.Size(118, 20);
             this.maKhachHang.TabIndex = 11;
-            this.maKhachHang.Text = "M� kh�ch h�ng";
+            this.maKhachHang.Text = "Mã khách hàng";
             // 
             // maPhieuDatCoc
             // 
@@ -167,7 +167,7 @@ namespace WindowsFormsApp1
             this.maPhieuDatCoc.Name = "maPhieuDatCoc";
             this.maPhieuDatCoc.Size = new System.Drawing.Size(130, 20);
             this.maPhieuDatCoc.TabIndex = 12;
-            this.maPhieuDatCoc.Text = "M� phi?u d?t c?c";
+            this.maPhieuDatCoc.Text = "Mã phiếu đặt cọc";
             // 
             // textBox1
             // 
@@ -218,7 +218,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.phongLabel);
             this.Controls.Add(this.xacNhanButton);
             this.Name = "UI_16_KiemTraDieuKienKhachThue";
-            this.Text = "Ki?m tra di?u ki?n kh�ch thu�";
+            this.Text = "Kiểm tra điều kiện khách thuê";
             ((System.ComponentModel.ISupportInitialize)(this.nhomGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

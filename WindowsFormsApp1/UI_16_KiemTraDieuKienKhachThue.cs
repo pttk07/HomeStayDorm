@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,14 +24,14 @@ namespace WindowsFormsApp1
                 string maKhach = maKhachTextBox.Text.Trim();
                 if (maKhach == "KH001")
                 {
-                    soTienLabel.Text = "S? ti?n: 2,000,000 VND";
-                    ngayDatLabel.Text = "Ng�y d?t: 01/06/2026";
-                    trangThaiLabel.Text = "Tr?ng th�i: C�n hi?u l?c";
-                    phongLabel.Text = "Ph�ng: 203 - Giu?ng A";
+                    soTienLabel.Text = "Số tiền: 2,000,000 VND";
+                    ngayDatLabel.Text = "Ngày đặt: 01/06/2026";
+                    trangThaiLabel.Text = "Trạng thái: Còn hiệu lực";
+                    phongLabel.Text = "Phòng: 203 - Giường A";
                 }
                 else
                 {
-                    MessageBox.Show("Kh�ng t?n t?i phi?u d?t c?c cho kh�ch n�y", "Th�ng b�o");
+                    MessageBox.Show("Không tồn tại phiếu đặt cọc cho khách này", "Thông báo");
                 }
             }
             else if (radioNhom.Checked)
@@ -39,29 +39,29 @@ namespace WindowsFormsApp1
                 string maPhieu = maPhieuTextBox.Text.Trim();
                 if (maPhieu == "PDCN001")
                 {
-                    soTienLabel.Text = "T?ng s? ti?n: 6,000,000 VND";
-                    ngayDatLabel.Text = "Ng�y d?t: 01/06/2026";
-                    trangThaiLabel.Text = "Tr?ng th�i: C�n hi?u l?c";
-                    phongLabel.Text = "Ph�ng: 305 - S?c ch?a 4 giu?ng";
+                    soTienLabel.Text = "Tổng số tiền: 6,000,000 VND";
+                    ngayDatLabel.Text = "Ngày đặt: 01/06/2026";
+                    trangThaiLabel.Text = "Trạng thái: Còn hiệu lực";
+                    phongLabel.Text = "Phòng: 305 - Sức chứa 4 giường";
 
                     nhomGrid.Rows.Clear();
                     nhomGrid.Columns.Clear();
-                    nhomGrid.Columns.Add("MaKhach", "M� kh�ch");
-                    nhomGrid.Columns.Add("TenKhach", "T�n kh�ch");
-                    nhomGrid.Columns.Add("GioiTinh", "Gi?i t�nh");
+                    nhomGrid.Columns.Add("MaKhach", "Mã khách");
+                    nhomGrid.Columns.Add("TenKhach", "Tên khách");
+                    nhomGrid.Columns.Add("GioiTinh", "Giới tính");
 
-                    nhomGrid.Rows.Add("KH001", "Nguy?n Van A", "Nam");
-                    nhomGrid.Rows.Add("KH002", "Tr?n Th? B", "N?");
-                    nhomGrid.Rows.Add("KH003", "L� Van C", "Nam");
+                    nhomGrid.Rows.Add("KH001", "Nguyễn Văn A", "Nam");
+                    nhomGrid.Rows.Add("KH002", "Trần Thị B", "Nữ");
+                    nhomGrid.Rows.Add("KH003", "Lê Văn C", "Nam");
                 }
                 else
                 {
-                    MessageBox.Show("Kh�ng t?n t?i phi?u d?t c?c nh�m n�y", "Th�ng b�o");
+                    MessageBox.Show("Không tồn tại phiếu đặt cọc nhóm này", "Thông báo");
                 }
             }
             else
             {
-                MessageBox.Show("Vui l�ng ch?n lo?i kh�ch (c� nh�n ho?c nh�m)", "Th�ng b�o");
+                MessageBox.Show("Vui lòng chọn loại khách (cá nhân hoặc nhóm)", "Thông báo");
             }
         }
 
@@ -69,15 +69,15 @@ namespace WindowsFormsApp1
         {
             if (radioCaNhan.Checked)
             {
-                MessageBox.Show("Th�ng tin phi?u d?t c?c c� nh�n d� du?c x�c nh?n. Ti?p t?c quy tr�nh nh?n ph�ng/l?p h?p d?ng.", "Th�ng b�o");
+                MessageBox.Show("Thông tin phiếu đặt cọc cá nhân đã được xác nhận. Tiếp tục quy trình nhận phòng/lập hợp đồng.", "Thông báo");
             }
             else if (radioNhom.Checked)
             {
-                MessageBox.Show("Th�ng tin phi?u d?t c?c nh�m d� du?c x�c nh?n. Ti?p t?c quy tr�nh nh?n ph�ng/l?p h?p d?ng.", "Th�ng b�o");
+                MessageBox.Show("Thông tin phiếu đặt cọc nhóm đã được xác nhận. Tiếp tục quy trình nhận phòng/lập hợp đồng.", "Thông báo");
             }
             else
             {
-                MessageBox.Show("Vui l�ng ch?n lo?i kh�ch tru?c khi x�c nh?n.", "Th�ng b�o");
+                MessageBox.Show("Vui lòng chọn loại khách trước khi xác nhận.", "Thông báo");
             }
         }
     }

@@ -1,4 +1,4 @@
-namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp1
 {
     partial class UI_19_KiemTraPhongGiuongConTrong
     {
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
             this.kiemTraButton.Name = "kiemTraButton";
             this.kiemTraButton.Size = new System.Drawing.Size(107, 40);
             this.kiemTraButton.TabIndex = 10;
-            this.kiemTraButton.Text = "Ki?m tra";
+            this.kiemTraButton.Text = "Kiểm tra";
             this.kiemTraButton.UseVisualStyleBackColor = false;
             this.kiemTraButton.Click += new System.EventHandler(this.lamMoiButton_Click);
             // 
@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             this.chonPhong.Name = "chonPhong";
             this.chonPhong.Size = new System.Drawing.Size(203, 20);
             this.chonPhong.TabIndex = 8;
-            this.chonPhong.Text = "Nh?p m� ph�ng/ Giu?ng";
+            this.chonPhong.Text = "Nhập mã phòng/giường";
             // 
             // maPhongGiuong
             // 
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
             this.ketQuaKiemTra.Size = new System.Drawing.Size(687, 124);
             this.ketQuaKiemTra.TabIndex = 12;
             this.ketQuaKiemTra.TabStop = false;
-            this.ketQuaKiemTra.Text = "K?t qu? ki?m tra";
+            this.ketQuaKiemTra.Text = "Kết quả kiểm tra";
             this.ketQuaKiemTra.Enter += new System.EventHandler(this.capNhatTrangThai_Enter);
             // 
             // thongTinHopDong
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
             this.thongTinHopDong.Name = "thongTinHopDong";
             this.thongTinHopDong.Size = new System.Drawing.Size(146, 20);
             this.thongTinHopDong.TabIndex = 2;
-            this.thongTinHopDong.Text = "Th�ng tin h?p d?ng";
+            this.thongTinHopDong.Text = "Thông tin hợp đồng";
             // 
             // tinTrangPhongHienTai
             // 
@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
             this.tinTrangPhongHienTai.Name = "tinTrangPhongHienTai";
             this.tinTrangPhongHienTai.Size = new System.Drawing.Size(184, 20);
             this.tinTrangPhongHienTai.TabIndex = 0;
-            this.tinTrangPhongHienTai.Text = "T�nh tr?ng ph�ng hi?n t?i";
+            this.tinTrangPhongHienTai.Text = "Tình trạng phòng hiện tại";
             // 
             // textBox1
             // 
@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
             this.hoanThanhButton.Name = "hoanThanhButton";
             this.hoanThanhButton.Size = new System.Drawing.Size(249, 48);
             this.hoanThanhButton.TabIndex = 13;
-            this.hoanThanhButton.Text = "Ho�n Th�nh";
+            this.hoanThanhButton.Text = "Hoàn Thành";
             this.hoanThanhButton.UseVisualStyleBackColor = false;
             // 
             // phongKhongTonTai
@@ -148,7 +148,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.chonPhong);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "UI_19_KiemTraPhongGiuongConTrong";
-            this.Text = "Ki?m tra ph�ng/Giu?ng c�n tr?ng";
+            this.Text = "Kiểm tra phòng/giường còn trống";
             this.ketQuaKiemTra.ResumeLayout(false);
             this.ketQuaKiemTra.PerformLayout();
             this.ResumeLayout(false);

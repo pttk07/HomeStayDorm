@@ -1,4 +1,4 @@
-namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp1
 {
     partial class UI_17_GhiNhanTinhTrangPhongGiuong
     {
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
             this.chonPhongGiuong.Name = "chonPhongGiuong";
             this.chonPhongGiuong.Size = new System.Drawing.Size(152, 20);
             this.chonPhongGiuong.TabIndex = 0;
-            this.chonPhongGiuong.Text = "Ch?n ph�ng/Giu?ng";
+            this.chonPhongGiuong.Text = "Chọn phòng/giường";
             // 
             // nguoiGhiNhan
             // 
@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             this.nguoiGhiNhan.Name = "nguoiGhiNhan";
             this.nguoiGhiNhan.Size = new System.Drawing.Size(115, 20);
             this.nguoiGhiNhan.TabIndex = 1;
-            this.nguoiGhiNhan.Text = "Ngu?i ghi nh?n";
+            this.nguoiGhiNhan.Text = "Người ghi nhận";
             // 
             // label3
             // 
@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Ng�y ghi nh?n";
+            this.label3.Text = "Ngày ghi nhận";
             // 
             // comboBox1
             // 
@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
             this.mucDoHuHong.Name = "mucDoHuHong";
             this.mucDoHuHong.Size = new System.Drawing.Size(137, 20);
             this.mucDoHuHong.TabIndex = 6;
-            this.mucDoHuHong.Text = "M?c d? hu h?ng";
+            this.mucDoHuHong.Text = "Mức độ hư hỏng";
             // 
             // tinhTrangChiTiet
             // 
@@ -117,7 +117,7 @@ namespace WindowsFormsApp1
             this.tinhTrangChiTiet.Name = "tinhTrangChiTiet";
             this.tinhTrangChiTiet.Size = new System.Drawing.Size(149, 20);
             this.tinhTrangChiTiet.TabIndex = 7;
-            this.tinhTrangChiTiet.Text = "T�nh tr?ng chi ti?t";
+            this.tinhTrangChiTiet.Text = "Tình trạng chi tiết";
             // 
             // textBox1
             // 
@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
             this.ketQua.Name = "ketQua";
             this.ketQua.Size = new System.Drawing.Size(71, 20);
             this.ketQua.TabIndex = 9;
-            this.ketQua.Text = "K?t qu?";
+            this.ketQua.Text = "Kết quả";
             // 
             // textBox2
             // 
@@ -152,7 +152,7 @@ namespace WindowsFormsApp1
             this.xoaButton.Name = "xoaButton";
             this.xoaButton.Size = new System.Drawing.Size(116, 34);
             this.xoaButton.TabIndex = 11;
-            this.xoaButton.Text = "Xo�";
+            this.xoaButton.Text = "Xóa";
             this.xoaButton.UseVisualStyleBackColor = true;
             this.xoaButton.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -162,7 +162,7 @@ namespace WindowsFormsApp1
             this.ghiNhanButton.Name = "ghiNhanButton";
             this.ghiNhanButton.Size = new System.Drawing.Size(116, 34);
             this.ghiNhanButton.TabIndex = 12;
-            this.ghiNhanButton.Text = "Ghi nh?n";
+            this.ghiNhanButton.Text = "Ghi nhận";
             this.ghiNhanButton.UseVisualStyleBackColor = true;
             // 
             // capNhatButton
@@ -171,7 +171,7 @@ namespace WindowsFormsApp1
             this.capNhatButton.Name = "capNhatButton";
             this.capNhatButton.Size = new System.Drawing.Size(116, 34);
             this.capNhatButton.TabIndex = 13;
-            this.capNhatButton.Text = "C?p nh?t";
+            this.capNhatButton.Text = "Cập nhật";
             this.capNhatButton.UseVisualStyleBackColor = true;
             // 
             // dongButton
@@ -180,7 +180,7 @@ namespace WindowsFormsApp1
             this.dongButton.Name = "dongButton";
             this.dongButton.Size = new System.Drawing.Size(116, 34);
             this.dongButton.TabIndex = 14;
-            this.dongButton.Text = "��ng";
+            this.dongButton.Text = "Đóng";
             this.dongButton.UseVisualStyleBackColor = true;
             // 
             // UI_17_GhiNhanTinhTrangPhongGiuong
@@ -204,7 +204,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.nguoiGhiNhan);
             this.Controls.Add(this.chonPhongGiuong);
             this.Name = "UI_17_GhiNhanTinhTrangPhongGiuong";
-            this.Text = "Ghi nh?n t�nh tr?ng ph�ng&giu?ng";
+            this.Text = "Ghi nhận tình trạng phòng & giường";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

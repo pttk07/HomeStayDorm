@@ -108,9 +108,9 @@
             this.pnlStats.Controls.Add(this.cardChoKy);
             this.pnlStats.Controls.Add(this.cardTraPhong);
             this.pnlStats.Location = new System.Drawing.Point(0, 80);
-            this.pnlStats.Size = new System.Drawing.Size(984, 106);
+            this.pnlStats.Size = new System.Drawing.Size(984, 126);
 
-            var cardSz = new System.Drawing.Size(210, 78);
+            var cardSz = new System.Drawing.Size(210, 96);
 
             BuildStatCard(this.cardPhongTrong, this.lblCPhongTrongT, this.lblCPhongTrongV, this.lblCPhongTrongS,
                 20, 14, cardSz, "Phòng/giường trống", "14", "Sẵn sàng nhận khách", System.Drawing.Color.FromArgb(15, 110, 86));
@@ -134,7 +134,7 @@
             this.pnlMenu.Controls.Add(this.btnKiemTraPhongTrong);
             this.pnlMenu.Controls.Add(this.btnLapBienBanBanGiao);
             this.pnlMenu.Controls.Add(this.btnTaoBienBanThanhLy);
-            this.pnlMenu.Location = new System.Drawing.Point(0, 186);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 206);
             this.pnlMenu.Size = new System.Drawing.Size(984, 178);
 
             this.lblMenuTitle.Text = "Chức năng quản lý";
@@ -167,7 +167,7 @@
             this.pnlQueue.BackColor = System.Drawing.Color.FromArgb(240, 245, 242);
             this.pnlQueue.Controls.Add(this.lblQueue);
             this.pnlQueue.Controls.Add(this.dgvCongViec);
-            this.pnlQueue.Location = new System.Drawing.Point(0, 364);
+            this.pnlQueue.Location = new System.Drawing.Point(0, 384);
             this.pnlQueue.Size = new System.Drawing.Size(984, 240);
 
             this.lblQueue.Text = "Công việc cần xử lý hôm nay";
@@ -187,7 +187,7 @@
             // ── Form ────────────────────────────────────────────────────────
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 612);
+            this.ClientSize = new System.Drawing.Size(984, 632);
             this.Text = "Dashboard Quản lý | HomeStay Dorm";
             this.BackColor = System.Drawing.Color.FromArgb(240, 245, 242);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -225,11 +225,11 @@
 
             lblV.Text = value; lblV.Font = new System.Drawing.Font("Segoe UI", 22, System.Drawing.FontStyle.Bold);
             lblV.ForeColor = accent;
-            lblV.Location = new System.Drawing.Point(12, 28); lblV.Size = new System.Drawing.Size(150, 34);
+            lblV.Location = new System.Drawing.Point(12, 30); lblV.Size = new System.Drawing.Size(150, 40);
 
             lblS.Text = sub; lblS.Font = new System.Drawing.Font("Segoe UI", 8f);
             lblS.ForeColor = System.Drawing.Color.FromArgb(140, 160, 150);
-            lblS.Location = new System.Drawing.Point(12, 58); lblS.Size = new System.Drawing.Size(190, 16);
+            lblS.Location = new System.Drawing.Point(12, 74); lblS.Size = new System.Drawing.Size(190, 18);
 
             card.Controls.Add(lblT); card.Controls.Add(lblV); card.Controls.Add(lblS);
         }

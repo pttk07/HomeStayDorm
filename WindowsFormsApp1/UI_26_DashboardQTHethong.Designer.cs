@@ -108,10 +108,10 @@
             this.pnlStats.Controls.Add(this.cardNguoiDung);
             this.pnlStats.Controls.Add(this.cardCho);
             this.pnlStats.Location = new System.Drawing.Point(0, 80);
-            this.pnlStats.Size = new System.Drawing.Size(984, 110);
+            this.pnlStats.Size = new System.Drawing.Size(984, 126);
 
             // Helper: card style
-            System.Drawing.Size cardSize = new System.Drawing.Size(210, 78);
+            System.Drawing.Size cardSize = new System.Drawing.Size(210, 96);
 
             // cardPhong
             this.cardPhong.BackColor = System.Drawing.Color.White;
@@ -176,7 +176,7 @@
             this.pnlMenu.Controls.Add(this.lblBtnNDDesc);
             this.pnlMenu.Controls.Add(this.btnQuanTriPhongGiuong);
             this.pnlMenu.Controls.Add(this.lblBtnPGDesc);
-            this.pnlMenu.Location = new System.Drawing.Point(0, 190);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 206);
             this.pnlMenu.Size = new System.Drawing.Size(984, 200);
             this.pnlMenu.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
 
@@ -260,7 +260,7 @@
             // Form
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 620);
+            this.ClientSize = new System.Drawing.Size(984, 430);
             this.Text = "Dashboard — Quản trị hệ thống | HomeStay Dorm";
             this.BackColor = System.Drawing.Color.FromArgb(240, 244, 250);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -268,7 +268,6 @@
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlStats);
             this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.pnlRecent);
 
             this.pnlHeader.ResumeLayout(false);
             this.pnlStats.ResumeLayout(false);
@@ -300,13 +299,13 @@
 
             value.Font = new System.Drawing.Font("Segoe UI", 22, System.Drawing.FontStyle.Bold);
             value.ForeColor = accentColor;
-            value.Location = new System.Drawing.Point(12, 28);
-            value.Size = new System.Drawing.Size(150, 36);
+            value.Location = new System.Drawing.Point(12, 30);
+            value.Size = new System.Drawing.Size(150, 40);
 
             sub.Font = new System.Drawing.Font("Segoe UI", 8f);
             sub.ForeColor = System.Drawing.Color.FromArgb(140, 150, 165);
-            sub.Location = new System.Drawing.Point(12, 58);
-            sub.Size = new System.Drawing.Size(190, 16);
+            sub.Location = new System.Drawing.Point(12, 74);
+            sub.Size = new System.Drawing.Size(190, 18);
         }
 
         #endregion

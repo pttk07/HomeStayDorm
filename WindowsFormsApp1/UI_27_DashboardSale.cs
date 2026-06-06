@@ -16,7 +16,6 @@ namespace WindowsFormsApp1
         {
             timerClock.Start();
             UpdateClock(null, null);
-            LoadHoatDongGanDay();
         }
 
         private void UpdateClock(object sender, EventArgs e)

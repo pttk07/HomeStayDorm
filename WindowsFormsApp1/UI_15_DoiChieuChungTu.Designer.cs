@@ -1,4 +1,4 @@
-namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp1
 {
     partial class UI_15_DoiChieuChungTu
     {
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nh?p m� ch?ng t?:";
+            this.label1.Text = "Nhập mã chứng từ:";
             // 
             // timKiemButton
             // 
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
             this.timKiemButton.Name = "timKiemButton";
             this.timKiemButton.Size = new System.Drawing.Size(110, 34);
             this.timKiemButton.TabIndex = 2;
-            this.timKiemButton.Text = "T�m ki?m";
+            this.timKiemButton.Text = "Tìm kiếm";
             this.timKiemButton.UseVisualStyleBackColor = true;
             // 
             // danhSachChungTuGrid
@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(204, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Danh s�ch ch?ng t?";
+            this.label2.Text = "Danh sách chứng từ";
             // 
             // groupBox1
             // 
@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
             this.groupBox1.Size = new System.Drawing.Size(793, 102);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "K?t qu? d?i chi?u";
+            this.groupBox1.Text = "Kết quả đối chiếu";
             // 
             // ketQuaDoiChieu
             // 
@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
             this.doiChieuButton.Name = "doiChieuButton";
             this.doiChieuButton.Size = new System.Drawing.Size(146, 36);
             this.doiChieuButton.TabIndex = 6;
-            this.doiChieuButton.Text = "�?i chi?u";
+            this.doiChieuButton.Text = "Đối chiếu";
             this.doiChieuButton.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -129,7 +129,7 @@ namespace WindowsFormsApp1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 36);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Xu?t b�o c�o";
+            this.button2.Text = "Xuất báo cáo";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // UI_15_DoiChieuChungTu
@@ -151,7 +151,7 @@ namespace WindowsFormsApp1
             this.Name = "UI_15_DoiChieuChungTu";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RightToLeftLayout = true;
-            this.Text = "�?i Chi?u Ch?ng T?";
+            this.Text = "Đối Chiếu Chứng Từ";
             this.Load += new System.EventHandler(this.UI_15_DoiChieuChungTu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.danhSachChungTuGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);

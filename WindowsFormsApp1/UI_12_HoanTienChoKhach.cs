@@ -34,6 +34,40 @@ namespace WindowsFormsApp1
             dataGridViewDoiSoat.Rows.Add("HD-2411-009", "Phan Thị Xuân",  "2.000.000", "500.000", "1.500.000", "Chờ xử lý");
         }
 
+        private void btnTraCuuHD_Click(object sender, EventArgs e)
+        {
+            using (var lookup = new UI_08_TraCuuHopDong())
+            {
+                if (lookup.ShowDialog(this) != DialogResult.OK) return;
+
+                string maHD = lookup.SelectedMaHD;
+
+                // Tìm dòng đã có trong grid
+                foreach (DataGridViewRow row in dataGridViewDoiSoat.Rows)
+                {
+                    if (row.Cells["colMaDon"].Value?.ToString() == maHD)
+                    {
+                        dataGridViewDoiSoat.ClearSelection();
+                        row.Selected = true;
+                        dataGridViewDoiSoat.FirstDisplayedScrollingRowIndex = row.Index;
+                        return;
+                    }
+                }
+
+                // Chưa có → thêm dòng mới với dữ liệu từ HĐ đã chọn
+                string mucGiaStr = (lookup.SelectedMucGia ?? "").Replace(" VNĐ", "").Replace(".", "").Replace(",", "").Trim();
+                decimal mucGia = 0;
+                decimal.TryParse(mucGiaStr, out mucGia);
+                string soTienCoc = mucGia > 0 ? (mucGia).ToString("N0", new System.Globalization.CultureInfo("vi-VN")) : "0";
+
+                dataGridViewDoiSoat.Rows.Add(maHD, lookup.SelectedKhachHang, soTienCoc, "0", soTienCoc, "Chưa hoàn");
+                int newIdx = dataGridViewDoiSoat.Rows.Count - 1;
+                dataGridViewDoiSoat.ClearSelection();
+                dataGridViewDoiSoat.Rows[newIdx].Selected = true;
+                dataGridViewDoiSoat.FirstDisplayedScrollingRowIndex = newIdx;
+            }
+        }
+
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
             string term = txtSearchCustomer.Text.Trim().ToLower();

@@ -11,6 +11,7 @@ namespace WindowsFormsApp1
         private Label labelSearch;
         private TextBox txtSearchCustomer;
         private Button btnTraCuu;
+        private Button btnTraCuuHD;
         private DataGridView dataGridViewDoiSoat;
         private Label lblSoTienCoc;
         private Label lblTongKhauTru;
@@ -48,6 +49,7 @@ namespace WindowsFormsApp1
             this.labelSearch = new Label();
             this.txtSearchCustomer = new TextBox();
             this.btnTraCuu = new Button();
+            this.btnTraCuuHD = new Button();
             this.dataGridViewDoiSoat = new DataGridView();
             this.lblSoTienCoc = new Label();
             this.lblTongKhauTru = new Label();
@@ -96,9 +98,22 @@ namespace WindowsFormsApp1
             this.btnTraCuu.Location = new Point(432, 42);
             this.btnTraCuu.Name = "btnTraCuu";
             this.btnTraCuu.Size = new Size(90, 26);
-            this.btnTraCuu.Text = "Tra cứu";
+            this.btnTraCuu.Text = "Tìm kiếm";
             this.btnTraCuu.UseVisualStyleBackColor = true;
             this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
+
+            // btnTraCuuHD
+            this.btnTraCuuHD.Location = new Point(530, 42);
+            this.btnTraCuuHD.Name = "btnTraCuuHD";
+            this.btnTraCuuHD.Size = new Size(130, 26);
+            this.btnTraCuuHD.Text = "Tra cứu HĐ...";
+            this.btnTraCuuHD.BackColor = Color.FromArgb(30, 64, 140);
+            this.btnTraCuuHD.ForeColor = Color.White;
+            this.btnTraCuuHD.FlatStyle = FlatStyle.Flat;
+            this.btnTraCuuHD.FlatAppearance.BorderSize = 0;
+            this.btnTraCuuHD.Cursor = Cursors.Hand;
+            this.btnTraCuuHD.UseVisualStyleBackColor = false;
+            this.btnTraCuuHD.Click += new System.EventHandler(this.btnTraCuuHD_Click);
 
             // dataGridViewDoiSoat
             this.dataGridViewDoiSoat.AllowUserToAddRows = false;
@@ -261,6 +276,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.txtSearchCustomer);
             this.Controls.Add(this.btnTraCuu);
+            this.Controls.Add(this.btnTraCuuHD);
             this.Controls.Add(this.dataGridViewDoiSoat);
             this.Controls.Add(this.lblSoTienCoc);
             this.Controls.Add(this.lblTongKhauTru);

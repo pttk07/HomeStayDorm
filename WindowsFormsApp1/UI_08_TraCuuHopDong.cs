@@ -12,12 +12,37 @@ namespace WindowsFormsApp1
 {
     public partial class UI_08_TraCuuHopDong : Form
     {
+        public string SelectedMaHD       { get; private set; }
+        public string SelectedKhachHang  { get; private set; }
+        public string SelectedPhong      { get; private set; }
+        public string SelectedMucGia     { get; private set; }
+        public string SelectedNgayKetThuc { get; private set; }
+
         public UI_08_TraCuuHopDong()
         {
             InitializeComponent();
             AppUiStyle.Apply(this);
             this.Load += (s, e) => LoadDanhSachHopDong();
             btnTimKiem.Click += (s, e) => TimKiem();
+            btnChonHopDong.Click += (s, e) => ChonHopDong();
+            dgvHopDong.DoubleClick += (s, e) => ChonHopDong();
+        }
+
+        private void ChonHopDong()
+        {
+            if (dgvHopDong.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn một hợp đồng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            var row = dgvHopDong.SelectedRows[0];
+            SelectedMaHD        = row.Cells[0].Value?.ToString();
+            SelectedKhachHang   = row.Cells[1].Value?.ToString();
+            SelectedPhong       = row.Cells[2].Value?.ToString();
+            SelectedNgayKetThuc = row.Cells[4].Value?.ToString();
+            SelectedMucGia      = row.Cells[5].Value?.ToString();
+            this.DialogResult   = DialogResult.OK;
+            this.Close();
         }
 
         private void LoadDanhSachHopDong()

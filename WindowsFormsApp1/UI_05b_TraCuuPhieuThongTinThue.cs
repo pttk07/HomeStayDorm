@@ -12,6 +12,10 @@ namespace WindowsFormsApp1
 {
     public partial class TraCuuPhieuThongTinThue : Form
     {
+        public string SelectedMaPhieu   { get; private set; }
+        public string SelectedKhachHang { get; private set; }
+        public string SelectedPhong     { get; private set; }
+
         public TraCuuPhieuThongTinThue()
         {
             InitializeComponent();
@@ -24,12 +28,26 @@ namespace WindowsFormsApp1
             dgvDanhSachPhieu.Rows.Add(new object[] { "PT-2504-006", "Đặng Thị Hoa",     "0978.901.234", "P102 - G102D", "01/04/2026", "Đang thuê" });
             dgvDanhSachPhieu.Rows.Add(new object[] { "PT-2506-007", "Trần Thị Bình",    "0912.345.678", "P202 - G202A", "05/06/2026", "Chờ xử lý" });
             dgvDanhSachPhieu.Rows.Add(new object[] { "PT-2503-008", "Bùi Thị Ngọc",     "0934.567.890", "P102 - G102C", "01/03/2026", "Đã trả" });
+
+            btnChonPhieu.Click += (s, e) => ChonPhieu();
+            dgvDanhSachPhieu.DoubleClick += (s, e) => ChonPhieu();
         }
 
-        private void TraCuuPhieuThongTinThue_Load(object sender, EventArgs e)
+        private void ChonPhieu()
         {
-
+            if (dgvDanhSachPhieu.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn một phiếu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            var row = dgvDanhSachPhieu.SelectedRows[0];
+            SelectedMaPhieu   = row.Cells[0].Value?.ToString();
+            SelectedKhachHang = row.Cells[1].Value?.ToString();
+            SelectedPhong     = row.Cells[3].Value?.ToString();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
+        private void TraCuuPhieuThongTinThue_Load(object sender, EventArgs e) { }
     }
 }

@@ -12,6 +12,7 @@
         private System.Windows.Forms.TextBox txtKhachHang;
         private System.Windows.Forms.Label lblMaHD;
         private System.Windows.Forms.TextBox txtMaHD;
+        private System.Windows.Forms.Button btnTraCuuHD;
         private System.Windows.Forms.Label lblPhong;
         private System.Windows.Forms.TextBox txtPhong;
         private System.Windows.Forms.Label lblThoiGian;
@@ -56,6 +57,7 @@
             this.lblPhong = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.lblMaHD = new System.Windows.Forms.Label();
+            this.btnTraCuuHD = new System.Windows.Forms.Button();
             this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.lblKhachHang = new System.Windows.Forms.Label();
             this.grpPhatSinh = new System.Windows.Forms.GroupBox();
@@ -101,11 +103,12 @@
             this.grpThongTin.Controls.Add(this.lblPhong);
             this.grpThongTin.Controls.Add(this.txtMaHD);
             this.grpThongTin.Controls.Add(this.lblMaHD);
+            this.grpThongTin.Controls.Add(this.btnTraCuuHD);
             this.grpThongTin.Controls.Add(this.txtKhachHang);
             this.grpThongTin.Controls.Add(this.lblKhachHang);
             this.grpThongTin.Location = new System.Drawing.Point(20, 50);
             this.grpThongTin.Name = "grpThongTin";
-            this.grpThongTin.Size = new System.Drawing.Size(744, 110);
+            this.grpThongTin.Size = new System.Drawing.Size(744, 140);
             this.grpThongTin.TabIndex = 1;
             this.grpThongTin.TabStop = false;
             this.grpThongTin.Text = "1. Thông tin hợp đồng";
@@ -113,7 +116,7 @@
             // txtThoiGian
             // 
             this.txtThoiGian.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtThoiGian.Location = new System.Drawing.Point(496, 72);
+            this.txtThoiGian.Location = new System.Drawing.Point(496, 105);
             this.txtThoiGian.Name = "txtThoiGian";
             this.txtThoiGian.ReadOnly = true;
             this.txtThoiGian.Size = new System.Drawing.Size(224, 29);
@@ -123,7 +126,7 @@
             // lblThoiGian
             // 
             this.lblThoiGian.AutoSize = true;
-            this.lblThoiGian.Location = new System.Drawing.Point(400, 75);
+            this.lblThoiGian.Location = new System.Drawing.Point(400, 108);
             this.lblThoiGian.Name = "lblThoiGian";
             this.lblThoiGian.Size = new System.Drawing.Size(90, 23);
             this.lblThoiGian.TabIndex = 1;
@@ -132,7 +135,7 @@
             // txtPhong
             // 
             this.txtPhong.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPhong.Location = new System.Drawing.Point(153, 72);
+            this.txtPhong.Location = new System.Drawing.Point(153, 105);
             this.txtPhong.Name = "txtPhong";
             this.txtPhong.ReadOnly = true;
             this.txtPhong.Size = new System.Drawing.Size(217, 29);
@@ -142,7 +145,7 @@
             // lblPhong
             // 
             this.lblPhong.AutoSize = true;
-            this.lblPhong.Location = new System.Drawing.Point(20, 75);
+            this.lblPhong.Location = new System.Drawing.Point(20, 108);
             this.lblPhong.Name = "lblPhong";
             this.lblPhong.Size = new System.Drawing.Size(127, 23);
             this.lblPhong.TabIndex = 3;
@@ -151,17 +154,32 @@
             // txtMaHD
             // 
             this.txtMaHD.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtMaHD.Location = new System.Drawing.Point(496, 32);
+            this.txtMaHD.Location = new System.Drawing.Point(120, 28);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.ReadOnly = true;
-            this.txtMaHD.Size = new System.Drawing.Size(224, 29);
+            this.txtMaHD.Size = new System.Drawing.Size(150, 29);
             this.txtMaHD.TabIndex = 4;
             this.txtMaHD.Text = "HD2026-001";
-            // 
+            //
+            // btnTraCuuHD
+            //
+            this.btnTraCuuHD.Location = new System.Drawing.Point(278, 26);
+            this.btnTraCuuHD.Name = "btnTraCuuHD";
+            this.btnTraCuuHD.Size = new System.Drawing.Size(130, 29);
+            this.btnTraCuuHD.TabIndex = 9;
+            this.btnTraCuuHD.Text = "Tra cứu HĐ...";
+            this.btnTraCuuHD.BackColor = System.Drawing.Color.FromArgb(30, 64, 140);
+            this.btnTraCuuHD.ForeColor = System.Drawing.Color.White;
+            this.btnTraCuuHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraCuuHD.FlatAppearance.BorderSize = 0;
+            this.btnTraCuuHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTraCuuHD.UseVisualStyleBackColor = false;
+            this.btnTraCuuHD.Click += new System.EventHandler(this.btnTraCuuHD_Click);
+            //
             // lblMaHD
-            // 
+            //
             this.lblMaHD.AutoSize = true;
-            this.lblMaHD.Location = new System.Drawing.Point(400, 35);
+            this.lblMaHD.Location = new System.Drawing.Point(20, 32);
             this.lblMaHD.Name = "lblMaHD";
             this.lblMaHD.Size = new System.Drawing.Size(67, 23);
             this.lblMaHD.TabIndex = 5;
@@ -170,17 +188,17 @@
             // txtKhachHang
             // 
             this.txtKhachHang.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtKhachHang.Location = new System.Drawing.Point(131, 32);
+            this.txtKhachHang.Location = new System.Drawing.Point(120, 67);
             this.txtKhachHang.Name = "txtKhachHang";
             this.txtKhachHang.ReadOnly = true;
-            this.txtKhachHang.Size = new System.Drawing.Size(239, 29);
+            this.txtKhachHang.Size = new System.Drawing.Size(600, 29);
             this.txtKhachHang.TabIndex = 6;
             this.txtKhachHang.Text = "Nguyễn Văn Demo";
             // 
             // lblKhachHang
             // 
             this.lblKhachHang.AutoSize = true;
-            this.lblKhachHang.Location = new System.Drawing.Point(20, 35);
+            this.lblKhachHang.Location = new System.Drawing.Point(20, 70);
             this.lblKhachHang.Name = "lblKhachHang";
             this.lblKhachHang.Size = new System.Drawing.Size(105, 23);
             this.lblKhachHang.TabIndex = 7;
@@ -191,7 +209,7 @@
             this.grpPhatSinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpPhatSinh.Controls.Add(this.dgvPhatSinh);
-            this.grpPhatSinh.Location = new System.Drawing.Point(20, 175);
+            this.grpPhatSinh.Location = new System.Drawing.Point(20, 205);
             this.grpPhatSinh.Name = "grpPhatSinh";
             this.grpPhatSinh.Size = new System.Drawing.Size(744, 180);
             this.grpPhatSinh.TabIndex = 2;
@@ -254,7 +272,7 @@
             this.grpTongKet.Controls.Add(this.lblTienCoc);
             this.grpTongKet.Controls.Add(this.txtGhiChu);
             this.grpTongKet.Controls.Add(this.lblGhiChu);
-            this.grpTongKet.Location = new System.Drawing.Point(20, 365);
+            this.grpTongKet.Location = new System.Drawing.Point(20, 395);
             this.grpTongKet.Name = "grpTongKet";
             this.grpTongKet.Size = new System.Drawing.Size(744, 180);
             this.grpTongKet.TabIndex = 3;
@@ -378,7 +396,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 621);
+            this.ClientSize = new System.Drawing.Size(784, 651);
             this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.grpTongKet);

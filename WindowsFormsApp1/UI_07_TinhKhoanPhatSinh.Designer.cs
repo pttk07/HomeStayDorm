@@ -8,6 +8,7 @@
         private System.Windows.Forms.GroupBox grpThongTin;
         private System.Windows.Forms.Label lblMaHD;
         private System.Windows.Forms.TextBox txtMaHD;
+        private System.Windows.Forms.Button btnTraCuuHD;
         private System.Windows.Forms.Label lblKhachHang;
         private System.Windows.Forms.TextBox txtKhachHang;
         private System.Windows.Forms.Label lblTienCoc;
@@ -55,6 +56,7 @@
             this.lblKhachHang = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.lblMaHD = new System.Windows.Forms.Label();
+            this.btnTraCuuHD = new System.Windows.Forms.Button();
             this.grpThemThuCong = new System.Windows.Forms.GroupBox();
             this.btnThemKhoan = new System.Windows.Forms.Button();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
@@ -90,9 +92,10 @@
             this.grpThongTin.Controls.Add(this.lblKhachHang);
             this.grpThongTin.Controls.Add(this.txtMaHD);
             this.grpThongTin.Controls.Add(this.lblMaHD);
+            this.grpThongTin.Controls.Add(this.btnTraCuuHD);
             this.grpThongTin.Location = new System.Drawing.Point(20, 15);
             this.grpThongTin.Name = "grpThongTin";
-            this.grpThongTin.Size = new System.Drawing.Size(750, 100);
+            this.grpThongTin.Size = new System.Drawing.Size(750, 130);
             this.grpThongTin.TabIndex = 0;
             this.grpThongTin.TabStop = false;
             this.grpThongTin.Text = "1. Thông tin hợp đồng & trả phòng";
@@ -102,7 +105,7 @@
             this.txtNgayTra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNgayTra.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNgayTra.Location = new System.Drawing.Point(395, 62);
+            this.txtNgayTra.Location = new System.Drawing.Point(395, 97);
             this.txtNgayTra.Name = "txtNgayTra";
             this.txtNgayTra.ReadOnly = true;
             this.txtNgayTra.Size = new System.Drawing.Size(349, 29);
@@ -113,7 +116,7 @@
             // lblNgayTra
             // 
             this.lblNgayTra.AutoSize = true;
-            this.lblNgayTra.Location = new System.Drawing.Point(290, 65);
+            this.lblNgayTra.Location = new System.Drawing.Point(290, 100);
             this.lblNgayTra.Name = "lblNgayTra";
             this.lblNgayTra.Size = new System.Drawing.Size(80, 23);
             this.lblNgayTra.TabIndex = 6;
@@ -123,7 +126,7 @@
             // 
             this.txtTienCoc.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtTienCoc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTienCoc.Location = new System.Drawing.Point(134, 63);
+            this.txtTienCoc.Location = new System.Drawing.Point(134, 97);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.ReadOnly = true;
             this.txtTienCoc.Size = new System.Drawing.Size(150, 29);
@@ -133,7 +136,7 @@
             // lblTienCoc
             // 
             this.lblTienCoc.AutoSize = true;
-            this.lblTienCoc.Location = new System.Drawing.Point(20, 65);
+            this.lblTienCoc.Location = new System.Drawing.Point(20, 100);
             this.lblTienCoc.Name = "lblTienCoc";
             this.lblTienCoc.Size = new System.Drawing.Size(110, 23);
             this.lblTienCoc.TabIndex = 4;
@@ -144,17 +147,17 @@
             this.txtKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKhachHang.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtKhachHang.Location = new System.Drawing.Point(395, 27);
+            this.txtKhachHang.Location = new System.Drawing.Point(134, 62);
             this.txtKhachHang.Name = "txtKhachHang";
             this.txtKhachHang.ReadOnly = true;
-            this.txtKhachHang.Size = new System.Drawing.Size(349, 29);
+            this.txtKhachHang.Size = new System.Drawing.Size(610, 29);
             this.txtKhachHang.TabIndex = 3;
             this.txtKhachHang.Text = "Nguyễn Văn Demo";
             // 
             // lblKhachHang
             // 
             this.lblKhachHang.AutoSize = true;
-            this.lblKhachHang.Location = new System.Drawing.Point(290, 30);
+            this.lblKhachHang.Location = new System.Drawing.Point(20, 65);
             this.lblKhachHang.Name = "lblKhachHang";
             this.lblKhachHang.Size = new System.Drawing.Size(105, 23);
             this.lblKhachHang.TabIndex = 2;
@@ -166,13 +169,27 @@
             this.txtMaHD.Location = new System.Drawing.Point(134, 28);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.ReadOnly = true;
-            this.txtMaHD.Size = new System.Drawing.Size(150, 29);
+            this.txtMaHD.Size = new System.Drawing.Size(115, 29);
             this.txtMaHD.TabIndex = 1;
             this.txtMaHD.Text = "HD2026-001";
             this.txtMaHD.TextChanged += new System.EventHandler(this.txtMaHD_TextChanged);
-            // 
+            //
+            // btnTraCuuHD
+            //
+            this.btnTraCuuHD.Location = new System.Drawing.Point(253, 26);
+            this.btnTraCuuHD.Name = "btnTraCuuHD";
+            this.btnTraCuuHD.Size = new System.Drawing.Size(110, 29);
+            this.btnTraCuuHD.TabIndex = 8;
+            this.btnTraCuuHD.Text = "Tra cứu HĐ...";
+            this.btnTraCuuHD.BackColor = System.Drawing.Color.FromArgb(30, 64, 140);
+            this.btnTraCuuHD.ForeColor = System.Drawing.Color.White;
+            this.btnTraCuuHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraCuuHD.FlatAppearance.BorderSize = 0;
+            this.btnTraCuuHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTraCuuHD.UseVisualStyleBackColor = false;
+            //
             // lblMaHD
-            // 
+            //
             this.lblMaHD.AutoSize = true;
             this.lblMaHD.Location = new System.Drawing.Point(20, 30);
             this.lblMaHD.Name = "lblMaHD";
@@ -191,7 +208,7 @@
             this.grpThemThuCong.Controls.Add(this.lblSoTienNhap);
             this.grpThemThuCong.Controls.Add(this.cboLoaiPhatSinh);
             this.grpThemThuCong.Controls.Add(this.lblLoai);
-            this.grpThemThuCong.Location = new System.Drawing.Point(20, 130);
+            this.grpThemThuCong.Location = new System.Drawing.Point(20, 160);
             this.grpThemThuCong.Name = "grpThemThuCong";
             this.grpThemThuCong.Size = new System.Drawing.Size(750, 80);
             this.grpThemThuCong.TabIndex = 1;
@@ -275,7 +292,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDanhSach.Controls.Add(this.dgvPhatSinh);
-            this.grpDanhSach.Location = new System.Drawing.Point(20, 230);
+            this.grpDanhSach.Location = new System.Drawing.Point(20, 260);
             this.grpDanhSach.Name = "grpDanhSach";
             this.grpDanhSach.Size = new System.Drawing.Size(750, 230);
             this.grpDanhSach.TabIndex = 2;
@@ -375,7 +392,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(794, 581);
+            this.ClientSize = new System.Drawing.Size(794, 611);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.valTongTien);
             this.Controls.Add(this.lblTongTien);

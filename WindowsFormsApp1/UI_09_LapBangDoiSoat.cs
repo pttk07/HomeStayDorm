@@ -19,6 +19,32 @@ namespace WindowsFormsApp1
             this.Load += (s, e) => LoadDemoData();
         }
 
+        private void btnTraCuuHD_Click(object sender, EventArgs e)
+        {
+            using (var lookup = new UI_08_TraCuuHopDong())
+            {
+                if (lookup.ShowDialog(this) != DialogResult.OK) return;
+
+                txtMaHD.Text      = lookup.SelectedMaHD;
+                txtKhachHang.Text = lookup.SelectedKhachHang;
+                txtPhong.Text     = lookup.SelectedPhong;
+
+                // Tính thời gian lưu trú từ ngày bắt đầu đến ngày kết thúc HĐ
+                // SelectedMucGia dạng "2.000.000 VNĐ" — dùng làm tiền cọc gốc (1 tháng)
+                string mucGiaRaw = (lookup.SelectedMucGia ?? "").Replace(" VNĐ", "").Replace(".", "").Trim();
+                decimal mucGia = 0;
+                decimal.TryParse(mucGiaRaw, out mucGia);
+
+                txtThoiGian.Text    = "Đến " + (lookup.SelectedNgayKetThuc ?? "");
+                txtTienCoc.Text     = mucGia > 0 ? AppUiStyle.Money(mucGia) : txtTienCoc.Text;
+                txtTienKhauTru.Text = "0 VNĐ";
+                valTienHoan.Text    = mucGia > 0 ? AppUiStyle.Money(mucGia) : valTienHoan.Text;
+
+                dgvPhatSinh.Rows.Clear();
+                txtGhiChu.Clear();
+            }
+        }
+
         private void LoadDemoData()
         {
             txtKhachHang.Text = "Bùi Thị Ngọc";

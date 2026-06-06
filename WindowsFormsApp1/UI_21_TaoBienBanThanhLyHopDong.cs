@@ -83,7 +83,11 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            phatSinhGrid.Rows.Add("", 0, "");
+            // Focus vào ô đầu tiên của dòng mới để nhập liệu
+            int lastRow = phatSinhGrid.Rows.Count - 1;
+            phatSinhGrid.CurrentCell = phatSinhGrid.Rows[lastRow].Cells[0];
+            phatSinhGrid.BeginEdit(true);
         }
     }
 }

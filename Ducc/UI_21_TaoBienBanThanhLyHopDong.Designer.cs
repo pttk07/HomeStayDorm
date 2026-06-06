@@ -7,7 +7,7 @@
         private System.Windows.Forms.Button taiDuLieuButton;
         private System.Windows.Forms.DataGridView phatSinhGrid;
         private System.Windows.Forms.Label tongTienLabel;
-        private System.Windows.Forms.Button hoanThanhButton;
+        private System.Windows.Forms.Button taoBienBanButton;
         private System.Windows.Forms.Label trangThaiLabel;
 
         protected override void Dispose(bool disposing)
@@ -27,7 +27,7 @@
             this.taiDuLieuButton = new System.Windows.Forms.Button();
             this.phatSinhGrid = new System.Windows.Forms.DataGridView();
             this.tongTienLabel = new System.Windows.Forms.Label();
-            this.hoanThanhButton = new System.Windows.Forms.Button();
+            this.taoBienBanButton = new System.Windows.Forms.Button();
             this.trangThaiLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.thongTinHopDong = new System.Windows.Forms.Label();
@@ -78,17 +78,17 @@
             this.tongTienLabel.TabIndex = 4;
             this.tongTienLabel.Text = "Tổng số tiền cần thanh toán/hoàn trả:";
             // 
-            // hoanThanhButton
+            // taoBienBanButton
             // 
-            this.hoanThanhButton.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.hoanThanhButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hoanThanhButton.Location = new System.Drawing.Point(527, 614);
-            this.hoanThanhButton.Name = "hoanThanhButton";
-            this.hoanThanhButton.Size = new System.Drawing.Size(130, 30);
-            this.hoanThanhButton.TabIndex = 5;
-            this.hoanThanhButton.Text = "Hoàn thành";
-            this.hoanThanhButton.UseVisualStyleBackColor = false;
-            this.hoanThanhButton.Click += new System.EventHandler(this.hoanThanhButton_Click);
+            this.taoBienBanButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.taoBienBanButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.taoBienBanButton.Location = new System.Drawing.Point(527, 614);
+            this.taoBienBanButton.Name = "taoBienBanButton";
+            this.taoBienBanButton.Size = new System.Drawing.Size(130, 30);
+            this.taoBienBanButton.TabIndex = 5;
+            this.taoBienBanButton.Text = "Tạo biên bản";
+            this.taoBienBanButton.UseVisualStyleBackColor = false;
+            this.taoBienBanButton.Click += new System.EventHandler(this.hoanThanhButton_Click);
             // 
             // trangThaiLabel
             // 
@@ -164,7 +164,7 @@
             this.Controls.Add(this.taiDuLieuButton);
             this.Controls.Add(this.phatSinhGrid);
             this.Controls.Add(this.tongTienLabel);
-            this.Controls.Add(this.hoanThanhButton);
+            this.Controls.Add(this.taoBienBanButton);
             this.Controls.Add(this.trangThaiLabel);
             this.Name = "UI_21_TaoBienBanThanhLyHopDong";
             this.Text = "Tạo biên bản thanh lý hợp đồng";

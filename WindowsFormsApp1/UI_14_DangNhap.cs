@@ -21,14 +21,14 @@ namespace WindowsFormsApp1
                 mainForm.Show();
             } else if (txtUsername.Text == "sale" && txtPassword.Text == "123456")
             {
-                MessageBox.Show("??ng nh?p th鄋h c鬾g!", "Th鬾g b醥", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("膼膬ng nh岷璸 th脿nh c么ng!", "Th么ng b谩o", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 UI_27_DashboardSale mainForm = new UI_27_DashboardSale();
                 mainForm.Closed += (s, args) => this.Close();
                 mainForm.Show();
             } else if (txtUsername.Text == "manager" && txtPassword.Text == "123456")
             {
-                MessageBox.Show("??ng nh?p th鄋h c鬾g!", "Th鬾g b醥", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("膼膬ng nh岷璸 th脿nh c么ng!", "Th么ng b谩o", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 UI_25_DashboardQuanLy mainForm = new UI_25_DashboardQuanLy();
                 mainForm.Closed += (s, args) => this.Close();

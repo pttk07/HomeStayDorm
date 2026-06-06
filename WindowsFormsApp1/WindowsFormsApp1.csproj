@@ -145,6 +145,59 @@
     <Compile Include="UI_27_DashboardSale.Designer.cs">
       <DependentUpon>UI_27_DashboardSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_09_LapBangDoiSoat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_09_LapBangDoiSoat.Designer.cs">
+      <DependentUpon>UI_09_LapBangDoiSoat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_05a_TaoPhieuThongTinTraPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_05a_TaoPhieuThongTinTraPhong.Designer.cs">
+      <DependentUpon>UI_05a_TaoPhieuThongTinTraPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_06a_TinhToanTienCoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_06a_TinhToanTienCoc.Designer.cs">
+      <DependentUpon>UI_06a_TinhToanTienCoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_05b_TraCuuPhieuThongTinThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_05b_TraCuuPhieuThongTinThue.Designer.cs">
+      <DependentUpon>UI_05b_TraCuuPhieuThongTinThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_06b_XuatYeuCauThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_06b_XuatYeuCauThanhToan.Designer.cs">
+      <DependentUpon>UI_06b_XuatYeuCauThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_07_TinhKhoanPhatSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_07_TinhKhoanPhatSinh.Designer.cs">
+      <DependentUpon>UI_07_TinhKhoanPhatSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_08_TraCuuHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_08_TraCuuHopDong.Designer.cs">
+      <DependentUpon>UI_08_TraCuuHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,24 +206,36 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="UI_28_DashboardKeToan.resx">
       <DependentUpon>UI_28_DashboardKeToan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI_09_LapBangDoiSoat.resx">
+      <DependentUpon>UI_09_LapBangDoiSoat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_05a_TaoPhieuThongTinTraPhong.resx">
+      <DependentUpon>UI_05a_TaoPhieuThongTinTraPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_06a_TinhToanTienCoc.resx">
+      <DependentUpon>UI_06a_TinhToanTienCoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_05b_TraCuuPhieuThongTinThue.resx">
+      <DependentUpon>UI_05b_TraCuuPhieuThongTinThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_06b_XuatYeuCauThanhToan.resx">
+      <DependentUpon>UI_06b_XuatYeuCauThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_07_TinhKhoanPhatSinh.resx">
+      <DependentUpon>UI_07_TinhKhoanPhatSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_08_TraCuuHopDong.resx">
+      <DependentUpon>UI_08_TraCuuHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

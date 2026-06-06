@@ -39,38 +39,32 @@ namespace WindowsFormsApp1
             if (receivedAmount < requiredAmount)
             {
                 decimal missing = requiredAmount - receivedAmount;
-                MessageBox.Show(string.Format("Số tiền không khớp! Khách hàng còn thiếu: {0:C0}.\nVui lòng thông báo lại cho khách hàng.", missing), 
+                MessageBox.Show($"Số tiền không khớp! Khách hàng còn thiếu: {missing:C0}.\nVui lòng thông báo lại cho khách hàng.", 
                     "Thanh toán chưa đủ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Ghi nhận thành công
-            string successMsg = string.Format("Hệ thống ghi nhận thanh toán cọc thành công!\n\n" +
-                                "Khách hàng: {0}\n" +
-                                "Số tiền đã nhận: {1:C0}\n" +
-                                "Hình thức thanh toán: {2}\n" +
-                                "Ngày thanh toán: {3}",
-                                txtCustomerName.Text, receivedAmount, cmbPaymentMethod.SelectedItem,
-                                dtpPaymentDate.Value.ToString("dd/MM/yyyy"));
+            string successMsg = $"Hệ thống ghi nhận thanh toán cọc thành công!\n\n" +
+                                $"Khách hàng: {txtCustomerName.Text}\n" +
+                                $"Số tiền đã nhận: {receivedAmount:C0}\n" +
+                                $"Hình thức thanh toán: {cmbPaymentMethod.SelectedItem}\n" +
+                                $"Ngày thanh toán: {dtpPaymentDate.Value.ToString("dd/MM/yyyy")}";
 
             MessageBox.Show(successMsg, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Hậu điều kiện: Chuyển sang bước lập hợp đồng
-            DialogResult result = MessageBox.Show("Ghi nhận thành công! Bạn có muốn chuyển sang bước Lập hợp đồng ngay bây giờ không?", 
+            // Hậu điều kiện: Chuyển sang bước lập phiếu đặt cọc
+            DialogResult result = MessageBox.Show("Ghi nhận thành công! Bạn có muốn chuyển sang bước Lập phiếu đặt cọc ngay bây giờ không?", 
                 "Chuyển bước", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                UI_02_LapHopDong contractForm = new UI_02_LapHopDong();
-                contractForm.Show();
+                UI_03_LapPhieuCoc depositForm = new UI_03_LapPhieuCoc();
+                // Optionally can pass parameters or data to this form if needed
+                depositForm.Show();
             }
 
             this.Close();
-        }
-
-        private void dtpPaymentDate_ValueChanged(object sender, EventArgs e)
-        {
-            dtpPaymentDate.CustomFormat = "dd/MM/yyyy";
         }
     }
 }

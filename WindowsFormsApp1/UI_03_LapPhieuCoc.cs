@@ -30,32 +30,16 @@ namespace WindowsFormsApp1
 
             // Ở đây có thể thêm code lưu vào CSDL
             // Hệ thống xuất thông tin đặt cọc
-            string depositInfo = string.Format("Phiếu đặt cọc đã được lưu thành công!\n\n" +
-                                 "Khách hàng: {0}\n" +
-                                 "Phòng: {1}\n" +
-                                 "Số tiền cọc: {2:C0}\n" +
-                                 "Ngày cọc: {3}\n" +
-                                 "Thời gian nhận phòng: {4}", 
-                                 txtCustomerName.Text, txtSelectedRoom.Text, depositAmount, 
-                                 dtpDepositDate.Value.ToString("dd/MM/yyyy"), 
-                                 dtpCheckIn.Value.ToString("dd/MM/yyyy HH:mm"));
+            string depositInfo = $"Phiếu đặt cọc đã được lưu thành công!\n\n" +
+                                 $"Khách hàng: {txtCustomerName.Text}\n" +
+                                 $"Phòng: {txtSelectedRoom.Text}\n" +
+                                 $"Số tiền cọc: {depositAmount:C0}\n" +
+                                 $"Ngày cọc: {dtpDepositDate.Value.ToString("dd/MM/yyyy")}\n" +
+                                 $"Thời gian nhận phòng: {dtpCheckIn.Value.ToString("dd/MM/yyyy HH:mm")}";
 
             MessageBox.Show(depositInfo, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
-            // Hậu điều kiện: Chuyển yêu cầu sang Kế toán
-            MessageBox.Show("Đã gửi yêu cầu thanh toán sang bộ phận Kế toán (UI_KeToan).", "Chuyển bước", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
             this.Close();
-        }
-
-        private void dtpDepositDate_ValueChanged(object sender, EventArgs e)
-        {
-            dtpDepositDate.CustomFormat = "dd/MM/yyyy";
-        }
-
-        private void dtpCheckIn_ValueChanged(object sender, EventArgs e)
-        {
-            dtpCheckIn.CustomFormat = "dd/MM/yyyy HH:mm";
         }
     }
 }

@@ -122,13 +122,11 @@ namespace WindowsFormsApp1
             // 
             // dtpPaymentDate
             // 
-            this.dtpPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPaymentDate.CustomFormat = " ";
+            this.dtpPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpPaymentDate.Location = new System.Drawing.Point(210, 237);
             this.dtpPaymentDate.Name = "dtpPaymentDate";
             this.dtpPaymentDate.Size = new System.Drawing.Size(220, 22);
             this.dtpPaymentDate.TabIndex = 10;
-            this.dtpPaymentDate.ValueChanged += new System.EventHandler(this.dtpPaymentDate_ValueChanged);
             // 
             // btnConfirm
             // 

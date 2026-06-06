@@ -101,13 +101,11 @@ namespace WindowsFormsApp1
             // 
             // dtpDepositDate
             // 
-            this.dtpDepositDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDepositDate.CustomFormat = " ";
+            this.dtpDepositDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDepositDate.Location = new System.Drawing.Point(190, 197);
             this.dtpDepositDate.Name = "dtpDepositDate";
             this.dtpDepositDate.Size = new System.Drawing.Size(250, 22);
             this.dtpDepositDate.TabIndex = 8;
-            this.dtpDepositDate.ValueChanged += new System.EventHandler(this.dtpDepositDate_ValueChanged);
             // 
             // lblCheckIn
             // 
@@ -120,13 +118,12 @@ namespace WindowsFormsApp1
             // 
             // dtpCheckIn
             // 
+            this.dtpCheckIn.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCheckIn.CustomFormat = " ";
             this.dtpCheckIn.Location = new System.Drawing.Point(190, 237);
             this.dtpCheckIn.Name = "dtpCheckIn";
             this.dtpCheckIn.Size = new System.Drawing.Size(250, 22);
             this.dtpCheckIn.TabIndex = 10;
-            this.dtpCheckIn.ValueChanged += new System.EventHandler(this.dtpCheckIn_ValueChanged);
             // 
             // btnSave
             // 

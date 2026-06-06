@@ -73,11 +73,11 @@
     <Compile Include="UI_18_CapNhatTrangThaiPhongTrong.Designer.cs">
       <DependentUpon>UI_18_CapNhatTrangThaiPhongTrong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI_17_GhiNhanTinhTrangPhongGiuong..cs">
+    <Compile Include="UI_17_GhiNhanTinhTrangPhongGiuong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI_17_GhiNhanTinhTrangPhongGiuong..Designer.cs">
-      <DependentUpon>UI_17_GhiNhanTinhTrangPhongGiuong..cs</DependentUpon>
+    <Compile Include="UI_17_GhiNhanTinhTrangPhongGiuong.Designer.cs">
+      <DependentUpon>UI_17_GhiNhanTinhTrangPhongGiuong.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_16_KiemTraDieuKienKhachThue.cs">
       <SubType>Form</SubType>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="UI_16_KiemTraDieuKienKhachThue.resx">
       <DependentUpon>UI_16_KiemTraDieuKienKhachThue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI_17_GhiNhanTinhTrangPhongGiuong..resx">
-      <DependentUpon>UI_17_GhiNhanTinhTrangPhongGiuong..cs</DependentUpon>
+    <EmbeddedResource Include="UI_17_GhiNhanTinhTrangPhongGiuong.resx">
+      <DependentUpon>UI_17_GhiNhanTinhTrangPhongGiuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_18_CapNhatTrangThaiPhongTrong.resx">
       <DependentUpon>UI_18_CapNhatTrangThaiPhongTrong.cs</DependentUpon>

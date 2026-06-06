@@ -34,9 +34,9 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void btnXuatYeuCauThanhToan_Click(object sender, EventArgs e)
+        private void btnTinhToanTienCoc_Click(object sender, EventArgs e)
         {
-            using (var f = new UI_06b_XuatYeuCauThanhToan())
+            using (var f = new UI_06a_TinhToanTienCoc())
                 f.ShowDialog(this);
         }
 

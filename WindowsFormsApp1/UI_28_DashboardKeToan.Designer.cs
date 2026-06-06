@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
 
         private Panel navPanel;
         private Label lblMenuTitle;
-        private Button btnXuatYeuCauThanhToan;
+        private Button btnTinhToanTienCoc;
         private Button btnTinhKhoanPhatSinh;
         private Button btnTraCuuHopDong;
         private Button btnLapBangDoiSoat;
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
 
             this.navPanel = new Panel();
             this.lblMenuTitle = new Label();
-            this.btnXuatYeuCauThanhToan = new Button();
+            this.btnTinhToanTienCoc = new Button();
             this.btnTinhKhoanPhatSinh = new Button();
             this.btnTraCuuHopDong = new Button();
             this.btnLapBangDoiSoat = new Button();
@@ -164,7 +164,7 @@ namespace WindowsFormsApp1
 
             this.navPanel.BackColor = Color.FromArgb(246, 243, 238);
             this.navPanel.Controls.Add(this.lblMenuTitle);
-            this.navPanel.Controls.Add(this.btnXuatYeuCauThanhToan);
+            this.navPanel.Controls.Add(this.btnTinhToanTienCoc);
             this.navPanel.Controls.Add(this.btnTinhKhoanPhatSinh);
             this.navPanel.Controls.Add(this.btnTraCuuHopDong);
             this.navPanel.Controls.Add(this.btnLapBangDoiSoat);
@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
             this.navPanel.Controls.Add(this.btnHoanTienChoKhach);
             this.navPanel.Controls.Add(this.btnCapNhatKetQuaThanhToan);
             this.navPanel.Location = new Point(0, 206);
-            this.navPanel.Size = new Size(984, 226);
+            this.navPanel.Size = new Size(984, 290);
 
             this.lblMenuTitle.Text = "Chức năng Kế toán";
             this.lblMenuTitle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
@@ -182,17 +182,16 @@ namespace WindowsFormsApp1
             this.lblMenuTitle.Size = new Size(260, 24);
 
             int bw = 218, bh = 52, by1 = 40, by2 = 104, gap = 230;
-            BuildMenuBtn(this.btnXuatYeuCauThanhToan, "Xuất yêu cầu thanh toán", 20, by1, bw, bh, Color.FromArgb(133, 79, 11));
+            BuildMenuBtn(this.btnTinhToanTienCoc, "Tính toán tiền cọc", 20, by1, bw, bh, Color.FromArgb(15, 110, 86));
             BuildMenuBtn(this.btnTinhKhoanPhatSinh, "Tính khoản phát sinh", 20 + gap, by1, bw, bh, Color.FromArgb(163, 45, 45));
             BuildMenuBtn(this.btnTraCuuHopDong, "Tra cứu hợp đồng", 20 + gap * 2, by1, bw, bh, Color.FromArgb(30, 64, 140));
             BuildMenuBtn(this.btnLapBangDoiSoat, "Lập bảng đối soát", 20 + gap * 3, by1, bw, bh, Color.FromArgb(15, 110, 86));
-
             BuildMenuBtn(this.btnDoiChieuKhoanThanhToan, "Đối chiếu thanh toán", 20, by2, bw, bh, Color.FromArgb(80, 60, 140));
             BuildMenuBtn(this.btnTinhKhoanCanThanhToan, "Tính khoản cần thanh toán", 20 + gap, by2, bw, bh, Color.FromArgb(100, 70, 30));
             BuildMenuBtn(this.btnHoanTienChoKhach, "Hoàn tiền cho khách", 20 + gap * 2, by2, bw, bh, Color.FromArgb(15, 90, 70));
             BuildMenuBtn(this.btnCapNhatKetQuaThanhToan, "Cập nhật kết quả thanh toán", 20 + gap * 3, by2, bw, bh, Color.FromArgb(60, 100, 160));
 
-            this.btnXuatYeuCauThanhToan.Click += new System.EventHandler(this.btnXuatYeuCauThanhToan_Click);
+            this.btnTinhToanTienCoc.Click += new System.EventHandler(this.btnTinhToanTienCoc_Click);
             this.btnTinhKhoanPhatSinh.Click += new System.EventHandler(this.btnTinhKhoanPhatSinh_Click);
             this.btnTraCuuHopDong.Click += new System.EventHandler(this.btnTraCuuHopDong_Click);
             this.btnLapBangDoiSoat.Click += new System.EventHandler(this.btnLapBangDoiSoat_Click);
@@ -203,7 +202,7 @@ namespace WindowsFormsApp1
 
             this.AutoScaleDimensions = new SizeF(7F, 15F);
             this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(984, 452);
+            this.ClientSize = new Size(984, 516);
             this.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.BackColor = Color.FromArgb(246, 243, 238);
             this.Name = "UI_28_DashboardKeToan";

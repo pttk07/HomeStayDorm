@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class LoginForm : Form
+    public partial class UI_14_DangNhap : Form
     {
-        public LoginForm()
+        public UI_14_DangNhap()
         {
             InitializeComponent();
         }
@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
         {
             if (txtUsername.Text == "admin" && txtPassword.Text == "123456")
             {
-                MessageBox.Show("??ng nh?p th�nh c�ng!", "Th�ng b�o", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 UI_26_DashboardQTHethong mainForm = new UI_26_DashboardQTHethong();
                 mainForm.Closed += (s, args) => this.Close();
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("Sai t�i kho?n ho?c m?t kh?u!", "L?i ??ng nh?p", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

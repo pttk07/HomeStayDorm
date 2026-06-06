@@ -1,6 +1,6 @@
-namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp1
 {
-    partial class LoginForm
+    partial class UI_14_DangNhap
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(131, 24);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "??NG NH?P";
+            this.lblTitle.Text = "ĐĂNG NHẬP";
             // 
             // lblUsername
             // 
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(84, 13);
             this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "T�n ??ng nh?p:";
+            this.lblUsername.Text = "Tên đăng nhập:";
             // 
             // txtUsername
             // 
@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(55, 13);
             this.lblPassword.TabIndex = 3;
-            this.lblPassword.Text = "M?t kh?u:";
+            this.lblPassword.Text = "Mật khẩu:";
             // 
             // txtPassword
             // 
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(90, 30);
             this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "??ng Nh?p";
+            this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(90, 30);
             this.btnExit.TabIndex = 6;
-            this.btnExit.Text = "Tho�t";
+            this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -103,7 +103,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblTitle);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "??ng Nh?p H? Th?ng";
+            this.Text = "Đăng Nhập Hệ Thống";
             this.ResumeLayout(false);
             this.PerformLayout();
 

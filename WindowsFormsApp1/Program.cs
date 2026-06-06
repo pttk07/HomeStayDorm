@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UI_02_LapHopDong());
+            Application.Run(new UI_14_DangNhap());
         }
     }
 }

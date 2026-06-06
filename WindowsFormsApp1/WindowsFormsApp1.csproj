@@ -293,6 +293,11 @@
     <EmbeddedResource Include="UI_01_TimKiemPhong.resx">
       <DependentUpon>UI_01_TimKiemPhong.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="UI_02_LapHopDong.resx">
+      <DependentUpon>UI_02_LapHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+
     <EmbeddedResource Include="UI_15_DoiChieuChungTu.resx">
       <DependentUpon>UI_15_DoiChieuChungTu.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +321,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

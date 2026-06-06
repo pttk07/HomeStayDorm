@@ -46,6 +46,10 @@ namespace WindowsFormsApp1
             this.btnSearch = new System.Windows.Forms.Button();
             this.gbResults = new System.Windows.Forms.GroupBox();
             this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.colRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBedPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             
             this.gbFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMinPrice)).BeginInit();
@@ -220,11 +224,6 @@ namespace WindowsFormsApp1
             this.numMaxPrice.Name = "numMaxPrice";
             this.numMaxPrice.Size = new System.Drawing.Size(160, 24);
             this.numMaxPrice.TabIndex = 9;
-            this.numMaxPrice.Value = new decimal(new int[] {
-            5000000,
-            0,
-            0,
-            0});
             
             // 
             // btnSearch
@@ -263,6 +262,11 @@ namespace WindowsFormsApp1
             this.dgvResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvResults.BackgroundColor = System.Drawing.Color.White;
             this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colRoomNumber,
+            this.colBedPosition,
+            this.colPrice,
+            this.colStatus});
             this.dgvResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResults.Location = new System.Drawing.Point(3, 20);
             this.dgvResults.Name = "dgvResults";
@@ -275,11 +279,57 @@ namespace WindowsFormsApp1
             this.dgvResults.TabIndex = 0;
             
             // 
+            // colRoomNumber
+            // 
+            this.colRoomNumber.HeaderText = "Số phòng";
+            this.colRoomNumber.Name = "colRoomNumber";
+            this.colRoomNumber.ReadOnly = true;
+            
+            // 
+            // colBedPosition
+            // 
+            this.colBedPosition.HeaderText = "Vị trí giường";
+            this.colBedPosition.Name = "colBedPosition";
+            this.colBedPosition.ReadOnly = true;
+            
+            // 
+            // colPrice
+            // 
+            this.colPrice.HeaderText = "Đơn giá";
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            
+            // 
+            // colStatus
+            // 
+            this.colStatus.HeaderText = "Trạng thái hiện tại";
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            
+            // 
+            // 
+            // btnSelectRoom
+            // 
+            this.btnSelectRoom = new System.Windows.Forms.Button();
+            this.btnSelectRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelectRoom.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSelectRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectRoom.ForeColor = System.Drawing.Color.White;
+            this.btnSelectRoom.Location = new System.Drawing.Point(690, 550);
+            this.btnSelectRoom.Name = "btnSelectRoom";
+            this.btnSelectRoom.Size = new System.Drawing.Size(160, 40);
+            this.btnSelectRoom.TabIndex = 3;
+            this.btnSelectRoom.Text = "CHỌN PHÒNG";
+            this.btnSelectRoom.UseVisualStyleBackColor = false;
+            this.btnSelectRoom.Click += new System.EventHandler(this.btnSelectRoom_Click);
+            
+            // 
             // UI_01_TimKiemPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 560);
+            this.ClientSize = new System.Drawing.Size(880, 610);
+            this.Controls.Add(this.btnSelectRoom);
             this.Controls.Add(this.gbResults);
             this.Controls.Add(this.gbFilters);
             this.Controls.Add(this.lblTitle);
@@ -299,19 +349,32 @@ namespace WindowsFormsApp1
 
         }
 
+        private System.Windows.Forms.Button btnSelectRoom;
+
+        private void btnSelectRoom_Click(object sender, EventArgs e)
+        {
+            if (dgvResults.SelectedRows.Count > 0)
+            {
+                MessageBox.Show("Đã chọn phòng: " + dgvResults.SelectedRows[0].Cells[0].Value.ToString() + "\nChuyển sang trang Đăng ký khách hàng.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Here we would transition to UI_DangKyKhach
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một phòng từ danh sách.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBedPosition;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+
         private void UI_01_TimKiemPhong_Load(object sender, EventArgs e)
         {
             // Thiết lập giá trị mặc định cho ComboBox
             cbLocation.SelectedIndex = 0;
             cbRoomType.SelectedIndex = 0;
             cbGender.SelectedIndex = 0;
-
-            // Thiết lập các cột cho DataGridView theo đúng Use Case
-            dgvResults.ColumnCount = 4;
-            dgvResults.Columns[0].Name = "Số phòng";
-            dgvResults.Columns[1].Name = "Vị trí giường";
-            dgvResults.Columns[2].Name = "Đơn giá";
-            dgvResults.Columns[3].Name = "Trạng thái hiện tại";
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

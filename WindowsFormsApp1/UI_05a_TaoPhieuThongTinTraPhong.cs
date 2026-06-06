@@ -20,10 +20,17 @@ namespace WindowsFormsApp1
 
         private void btnMoTraCuu_Click(object sender, EventArgs e)
         {
-            TraCuuPhieuThongTinThue frmTraCuu = new TraCuuPhieuThongTinThue();
+            using (var frmTraCuu = new TraCuuPhieuThongTinThue())
+            {
+                if (frmTraCuu.ShowDialog(this) != DialogResult.OK) return;
 
-            // 2. Hiển thị màn hình Tra cứu lên
-            frmTraCuu.ShowDialog();
+                txtMaPhieuThue.Text = frmTraCuu.SelectedMaPhieu;
+                txtMaPhong.Text     = frmTraCuu.SelectedPhong;
+
+                // Gợi ý lý do mặc định nếu chưa nhập
+                if (string.IsNullOrWhiteSpace(txtLyDo.Text))
+                    txtLyDo.Text = "Khách tự nguyện trả phòng trước hạn.";
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -19,6 +19,10 @@ namespace WindowsFormsApp1
         private TextBox txtCustomerInfo;
         
         private DataGridView dgvRooms; // Thêm bảng dgvRooms
+        private DataGridViewTextBoxColumn colRoomNumber;
+        private DataGridViewTextBoxColumn colBedPosition;
+        private DataGridViewTextBoxColumn colPrice;
+        private DataGridViewTextBoxColumn colStatus;
         
         private Label lblDuration;
         private TextBox txtDuration;
@@ -47,6 +51,10 @@ namespace WindowsFormsApp1
             this.lblCustomerInfo = new System.Windows.Forms.Label();
             this.txtCustomerInfo = new System.Windows.Forms.TextBox();
             this.dgvRooms = new System.Windows.Forms.DataGridView();
+            this.colRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBedPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblDuration = new System.Windows.Forms.Label();
             this.txtDuration = new System.Windows.Forms.TextBox();
             this.lblTotalCost = new System.Windows.Forms.Label();
@@ -60,28 +68,13 @@ namespace WindowsFormsApp1
             this.panelContent.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelContent
-            // 
-            this.panelContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelContent.Controls.Add(this.btnCreateContract);
-            this.panelContent.Controls.Add(this.gbContractInfo);
-            this.panelContent.Controls.Add(this.btnSearchDeposit);
-            this.panelContent.Controls.Add(this.txtDepositCode);
-            this.panelContent.Controls.Add(this.lblDepositCode);
-            this.panelContent.Controls.Add(this.lblTitle);
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 0);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(800, 560);
-            this.panelContent.TabIndex = 0;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(300, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(201, 29);
+            this.lblTitle.Size = new System.Drawing.Size(205, 29);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "LẬP HỢP ĐỒNG";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,7 +84,7 @@ namespace WindowsFormsApp1
             this.lblDepositCode.AutoSize = true;
             this.lblDepositCode.Location = new System.Drawing.Point(30, 70);
             this.lblDepositCode.Name = "lblDepositCode";
-            this.lblDepositCode.Size = new System.Drawing.Size(120, 16);
+            this.lblDepositCode.Size = new System.Drawing.Size(112, 16);
             this.lblDepositCode.TabIndex = 1;
             this.lblDepositCode.Text = "Mã phiếu đặt cọc:";
             // 
@@ -104,12 +97,15 @@ namespace WindowsFormsApp1
             // 
             // btnSearchDeposit
             // 
+            this.btnSearchDeposit.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSearchDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchDeposit.ForeColor = System.Drawing.Color.White;
             this.btnSearchDeposit.Location = new System.Drawing.Point(380, 65);
             this.btnSearchDeposit.Name = "btnSearchDeposit";
             this.btnSearchDeposit.Size = new System.Drawing.Size(150, 30);
             this.btnSearchDeposit.TabIndex = 3;
             this.btnSearchDeposit.Text = "Tra cứu phiếu cọc";
-            this.btnSearchDeposit.UseVisualStyleBackColor = true;
+            this.btnSearchDeposit.UseVisualStyleBackColor = false;
             this.btnSearchDeposit.Click += new System.EventHandler(this.btnSearchDeposit_Click);
             // 
             // gbContractInfo
@@ -146,6 +142,7 @@ namespace WindowsFormsApp1
             // 
             // txtContractCode
             // 
+            this.txtContractCode.BackColor = System.Drawing.Color.White;
             this.txtContractCode.Location = new System.Drawing.Point(150, 37);
             this.txtContractCode.Name = "txtContractCode";
             this.txtContractCode.ReadOnly = true;
@@ -163,6 +160,7 @@ namespace WindowsFormsApp1
             // 
             // txtCustomerInfo
             // 
+            this.txtCustomerInfo.BackColor = System.Drawing.Color.White;
             this.txtCustomerInfo.Location = new System.Drawing.Point(150, 77);
             this.txtCustomerInfo.Name = "txtCustomerInfo";
             this.txtCustomerInfo.ReadOnly = true;
@@ -171,14 +169,50 @@ namespace WindowsFormsApp1
             // 
             // dgvRooms
             // 
+            this.dgvRooms.AllowUserToAddRows = false;
+            this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRooms.BackgroundColor = System.Drawing.Color.White;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colRoomNumber,
+            this.colBedPosition,
+            this.colPrice,
+            this.colStatus});
             this.dgvRooms.Location = new System.Drawing.Point(20, 117);
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.RowHeadersVisible = false;
+            this.dgvRooms.RowHeadersWidth = 51;
+            this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRooms.Size = new System.Drawing.Size(690, 100);
             this.dgvRooms.TabIndex = 4;
-            this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRooms.AllowUserToAddRows = false;
+            // 
+            // colRoomNumber
+            // 
+            this.colRoomNumber.HeaderText = "Số phòng";
+            this.colRoomNumber.MinimumWidth = 6;
+            this.colRoomNumber.Name = "colRoomNumber";
+            this.colRoomNumber.ReadOnly = true;
+            // 
+            // colBedPosition
+            // 
+            this.colBedPosition.HeaderText = "Vị trí giường";
+            this.colBedPosition.MinimumWidth = 6;
+            this.colBedPosition.Name = "colBedPosition";
+            this.colBedPosition.ReadOnly = true;
+            // 
+            // colPrice
+            // 
+            this.colPrice.HeaderText = "Đơn giá";
+            this.colPrice.MinimumWidth = 6;
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            this.colStatus.HeaderText = "Trạng thái hiện tại";
+            this.colStatus.MinimumWidth = 6;
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
             // 
             // lblDuration
             // 
@@ -191,6 +225,7 @@ namespace WindowsFormsApp1
             // 
             // txtDuration
             // 
+            this.txtDuration.BackColor = System.Drawing.Color.White;
             this.txtDuration.Location = new System.Drawing.Point(150, 227);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.ReadOnly = true;
@@ -208,6 +243,7 @@ namespace WindowsFormsApp1
             // 
             // txtTotalCost
             // 
+            this.txtTotalCost.BackColor = System.Drawing.Color.White;
             this.txtTotalCost.Location = new System.Drawing.Point(150, 267);
             this.txtTotalCost.Name = "txtTotalCost";
             this.txtTotalCost.ReadOnly = true;
@@ -219,12 +255,13 @@ namespace WindowsFormsApp1
             this.lblTerms.AutoSize = true;
             this.lblTerms.Location = new System.Drawing.Point(20, 310);
             this.lblTerms.Name = "lblTerms";
-            this.lblTerms.Size = new System.Drawing.Size(76, 16);
+            this.lblTerms.Size = new System.Drawing.Size(77, 16);
             this.lblTerms.TabIndex = 10;
             this.lblTerms.Text = "Điều khoản:";
             // 
             // txtTerms
             // 
+            this.txtTerms.BackColor = System.Drawing.Color.White;
             this.txtTerms.Location = new System.Drawing.Point(150, 307);
             this.txtTerms.Multiline = true;
             this.txtTerms.Name = "txtTerms";
@@ -236,15 +273,32 @@ namespace WindowsFormsApp1
             // btnCreateContract
             // 
             this.btnCreateContract.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCreateContract.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnCreateContract.Enabled = false;
-            this.btnCreateContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateContract.Location = new System.Drawing.Point(340, 500);
+            this.btnCreateContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateContract.ForeColor = System.Drawing.Color.White;
+            this.btnCreateContract.Location = new System.Drawing.Point(334, 515);
             this.btnCreateContract.Name = "btnCreateContract";
             this.btnCreateContract.Size = new System.Drawing.Size(150, 40);
             this.btnCreateContract.TabIndex = 5;
             this.btnCreateContract.Text = "Lập hợp đồng";
-            this.btnCreateContract.UseVisualStyleBackColor = true;
+            this.btnCreateContract.UseVisualStyleBackColor = false;
             this.btnCreateContract.Click += new System.EventHandler(this.btnCreateContract_Click);
+            // 
+            // panelContent
+            // 
+            this.panelContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelContent.Controls.Add(this.btnCreateContract);
+            this.panelContent.Controls.Add(this.gbContractInfo);
+            this.panelContent.Controls.Add(this.btnSearchDeposit);
+            this.panelContent.Controls.Add(this.txtDepositCode);
+            this.panelContent.Controls.Add(this.lblDepositCode);
+            this.panelContent.Controls.Add(this.lblTitle);
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(0, 0);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(800, 560);
+            this.panelContent.TabIndex = 0;
             // 
             // UI_02_LapHopDong
             // 
@@ -264,12 +318,7 @@ namespace WindowsFormsApp1
 
         private void UI_02_LapHopDong_Load(object sender, EventArgs e)
         {
-            // Thiết lập các cột cho DataGridView dgvRooms
-            dgvRooms.ColumnCount = 4;
-            dgvRooms.Columns[0].Name = "Số phòng";
-            dgvRooms.Columns[1].Name = "Đơn giá";
-            dgvRooms.Columns[2].Name = "Trạng thái";
-            dgvRooms.Columns[3].Name = "Trường bổ sung";
+            // Initialization code if needed
         }
 
         private void btnSearchDeposit_Click(object sender, EventArgs e)
@@ -287,7 +336,7 @@ namespace WindowsFormsApp1
                 
                 // Clear existing and add mock room
                 dgvRooms.Rows.Clear();
-                dgvRooms.Rows.Add("101", "5,000,000", "Đang trống", "Giường Master");
+                dgvRooms.Rows.Add("101", "Giường Master", "5,000,000", "Trống");
                 
                 txtDuration.Text = "01/10/2023 - 01/10/2024 (12 tháng)";
                 txtTotalCost.Text = "5,000,000 VNĐ/tháng";

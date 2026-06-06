@@ -39,17 +39,19 @@ namespace WindowsFormsApp1
             if (receivedAmount < requiredAmount)
             {
                 decimal missing = requiredAmount - receivedAmount;
-                MessageBox.Show($"Số tiền không khớp! Khách hàng còn thiếu: {missing:C0}.\nVui lòng thông báo lại cho khách hàng.", 
+                MessageBox.Show(string.Format("Số tiền không khớp! Khách hàng còn thiếu: {0:C0}.\nVui lòng thông báo lại cho khách hàng.", missing), 
                     "Thanh toán chưa đủ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Ghi nhận thành công
-            string successMsg = $"Hệ thống ghi nhận thanh toán cọc thành công!\n\n" +
-                                $"Khách hàng: {txtCustomerName.Text}\n" +
-                                $"Số tiền đã nhận: {receivedAmount:C0}\n" +
-                                $"Hình thức thanh toán: {cmbPaymentMethod.SelectedItem}\n" +
-                                $"Ngày thanh toán: {dtpPaymentDate.Value.ToString("dd/MM/yyyy")}";
+            string successMsg = string.Format("Hệ thống ghi nhận thanh toán cọc thành công!\n\n" +
+                                "Khách hàng: {0}\n" +
+                                "Số tiền đã nhận: {1:C0}\n" +
+                                "Hình thức thanh toán: {2}\n" +
+                                "Ngày thanh toán: {3}",
+                                txtCustomerName.Text, receivedAmount, cmbPaymentMethod.SelectedItem,
+                                dtpPaymentDate.Value.ToString("dd/MM/yyyy"));
 
             MessageBox.Show(successMsg, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -64,6 +66,11 @@ namespace WindowsFormsApp1
             }
 
             this.Close();
+        }
+
+        private void dtpPaymentDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpPaymentDate.CustomFormat = "dd/MM/yyyy";
         }
     }
 }

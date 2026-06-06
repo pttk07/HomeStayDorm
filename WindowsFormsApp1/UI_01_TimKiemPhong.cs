@@ -46,6 +46,10 @@ namespace WindowsFormsApp1
             this.btnSearch = new System.Windows.Forms.Button();
             this.gbResults = new System.Windows.Forms.GroupBox();
             this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.colRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBedPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             
             this.gbFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMinPrice)).BeginInit();
@@ -220,11 +224,6 @@ namespace WindowsFormsApp1
             this.numMaxPrice.Name = "numMaxPrice";
             this.numMaxPrice.Size = new System.Drawing.Size(160, 24);
             this.numMaxPrice.TabIndex = 9;
-            this.numMaxPrice.Value = new decimal(new int[] {
-            5000000,
-            0,
-            0,
-            0});
             
             // 
             // btnSearch
@@ -263,6 +262,11 @@ namespace WindowsFormsApp1
             this.dgvResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvResults.BackgroundColor = System.Drawing.Color.White;
             this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colRoomNumber,
+            this.colBedPosition,
+            this.colPrice,
+            this.colStatus});
             this.dgvResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResults.Location = new System.Drawing.Point(3, 20);
             this.dgvResults.Name = "dgvResults";
@@ -273,6 +277,34 @@ namespace WindowsFormsApp1
             this.dgvResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResults.Size = new System.Drawing.Size(814, 277);
             this.dgvResults.TabIndex = 0;
+            
+            // 
+            // colRoomNumber
+            // 
+            this.colRoomNumber.HeaderText = "Số phòng";
+            this.colRoomNumber.Name = "colRoomNumber";
+            this.colRoomNumber.ReadOnly = true;
+            
+            // 
+            // colBedPosition
+            // 
+            this.colBedPosition.HeaderText = "Vị trí giường";
+            this.colBedPosition.Name = "colBedPosition";
+            this.colBedPosition.ReadOnly = true;
+            
+            // 
+            // colPrice
+            // 
+            this.colPrice.HeaderText = "Đơn giá";
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            
+            // 
+            // colStatus
+            // 
+            this.colStatus.HeaderText = "Trạng thái hiện tại";
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
             
             // 
             // 
@@ -332,19 +364,17 @@ namespace WindowsFormsApp1
             }
         }
 
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBedPosition;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+
         private void UI_01_TimKiemPhong_Load(object sender, EventArgs e)
         {
             // Thiết lập giá trị mặc định cho ComboBox
             cbLocation.SelectedIndex = 0;
             cbRoomType.SelectedIndex = 0;
             cbGender.SelectedIndex = 0;
-
-            // Thiết lập các cột cho DataGridView theo đúng Use Case
-            dgvResults.ColumnCount = 4;
-            dgvResults.Columns[0].Name = "Số phòng";
-            dgvResults.Columns[1].Name = "Vị trí giường";
-            dgvResults.Columns[2].Name = "Đơn giá";
-            dgvResults.Columns[3].Name = "Trạng thái hiện tại";
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

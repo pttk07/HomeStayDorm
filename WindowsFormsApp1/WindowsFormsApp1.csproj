@@ -61,6 +61,48 @@
     <Compile Include="UI_14_DangNhap.Designer.cs">
       <DependentUpon>UI_14_DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_15_DoiChieuChungTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_15_DoiChieuChungTu.Designer.cs">
+      <DependentUpon>UI_15_DoiChieuChungTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_16_KiemTraDieuKienKhachThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_16_KiemTraDieuKienKhachThue.Designer.cs">
+      <DependentUpon>UI_16_KiemTraDieuKienKhachThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_17_GhiNhanTinhTrangPhongGiuong..cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_17_GhiNhanTinhTrangPhongGiuong..Designer.cs">
+      <DependentUpon>UI_17_GhiNhanTinhTrangPhongGiuong..cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_18_CapNhatTrangThaiPhongTrong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_18_CapNhatTrangThaiPhongTrong.Designer.cs">
+      <DependentUpon>UI_18_CapNhatTrangThaiPhongTrong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_19_KiemTraPhongGiuongConTrong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_19_KiemTraPhongGiuongConTrong.Designer.cs">
+      <DependentUpon>UI_19_KiemTraPhongGiuongConTrong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_20_LapBienBanGiaoPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_20_LapBienBanGiaoPhong.Designer.cs">
+      <DependentUpon>UI_20_LapBienBanGiaoPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_21_TaoBienBanThanhLyHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_21_TaoBienBanThanhLyHopDong.Designer.cs">
+      <DependentUpon>UI_21_TaoBienBanThanhLyHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_10_DoiChieuThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +292,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI_01_TimKiemPhong.resx">
       <DependentUpon>UI_01_TimKiemPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_15_DoiChieuChungTu.resx">
+      <DependentUpon>UI_15_DoiChieuChungTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_16_KiemTraDieuKienKhachThue.resx">
+      <DependentUpon>UI_16_KiemTraDieuKienKhachThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_17_GhiNhanTinhTrangPhongGiuong..resx">
+      <DependentUpon>UI_17_GhiNhanTinhTrangPhongGiuong..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_18_CapNhatTrangThaiPhongTrong.resx">
+      <DependentUpon>UI_18_CapNhatTrangThaiPhongTrong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_19_KiemTraPhongGiuongConTrong.resx">
+      <DependentUpon>UI_19_KiemTraPhongGiuongConTrong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_20_LapBienBanGiaoPhong.resx">
+      <DependentUpon>UI_20_LapBienBanGiaoPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_21_TaoBienBanThanhLyHopDong.resx">
+      <DependentUpon>UI_21_TaoBienBanThanhLyHopDong.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -26,5 +26,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            using (var form = new UI_07b_KhauTru())
+                form.ShowDialog(this);
+        }
     }
 }

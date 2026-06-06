@@ -368,6 +368,7 @@
             this.btnXacNhan.TabIndex = 5;
             this.btnXacNhan.Text = "Xác nhận && Chuyển sang Khấu trừ ➔";
             this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // UI_8_Tính_khoản_phát_sinh
             // 
